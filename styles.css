@@ -51,31 +51,32 @@ main {
     margin-bottom: 40px;
 }
 
-.hero-line-1,
-.hero-line-2 {
+.hero-line {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 30px;
     flex-wrap: wrap;
-}
-.hero-line-1 {
-    margin: 120px 0 20px 0;
+    width: 980px;
+    margin: 120px auto;
 }
 
 
 .hero-1,
-.hero-2-1,
-.hero-2-2 {
-    height: 60px;
+.hero-2,
+.hero-3,
+.hero-4 {
+    height: 55px;
     width: auto;
 }
 
 .rights-input {
-    width: 100px;
+    width: 90px;
+    height: 65px;
     font-family: 'Atkinson Hyperlegible Next', sans-serif;
     font-size: 80px;
     color: rgb(0, 0, 0);
+    background: transparent;
     border: none;
     text-align: center;
     vertical-align: baseline;
@@ -183,8 +184,19 @@ footer {
 }
 
 /* Responsive Design */
+
+/* Tablet styles (769px - 1023px) */
+@media (min-width: 769px) and (max-width: 1023px) {
+    .hero-line {
+        width: 602px;
+        margin: 0 auto;
+        justify-content: start;
+    }
+}
+
+/* Mobile styles (max-width: 768px) */
 @media (max-width: 768px) {
-    .hero-line-2 {
+    .hero-line {
         flex-direction: column;
         gap: 15px;
     }
