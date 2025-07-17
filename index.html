@@ -1,17 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ultra Civic</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra Civic: Buy + Retire Pollution Rights.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/svg/icon-light.svg" type="image/svg+xml">
 </head>
+
 <body>
-  <main>
-    <div class="container">
-      <!-- content -->
-    </div>
-  </main>
-  <script src="script.js"></script>
+    <header>
+        <img src="assets/svg/logo.svg" alt="Ultra Civic" class="logo">
+    </header>
+    
+    <main>
+        <section class="hero">
+            <img src="assets/svg/hero-1.svg" alt="" class="hero-line-1">
+            
+            <div class="hero-line-2">
+                <img src="assets/svg/hero-2-1.svg" alt="" class="hero-2-1">
+                <input type="number" id="pollution-rights" min="1" value="99" class="rights-input">
+                <img src="assets/svg/hero-2-2.svg" alt="" class="hero-2-2">
+            </div>
+        </section>
+        
+        <section class="hero-details">
+            <div class="pay-section">
+                <img src="assets/svg/pay-1.svg" alt="" class="pay-1">
+                <span id="usd-price" class="price-value">$2,376</span>
+                <img src="assets/svg/pay-2.svg" alt="" class="pay-2">
+            </div>
+            
+            <div class="earn-section">
+                <img src="assets/svg/earn-1.svg" alt="" class="earn-1">
+                <span id="pr-tokens" class="token-value">99</span>
+                <img src="assets/svg/earn-2.svg" alt="" class="earn-2">
+            </div>
+        </section>
+        
+        <section class="action">
+            <img src="assets/svg/doit.svg" alt="Do It" class="doit-button">
+        </section>
+        
+        <section class="what-section">
+            <img src="assets/svg/what.svg" alt="What?" class="what-title">
+            <p class="what-content"></p>
+        </section>
+    </main>
+    
+    <footer>
+        <img src="assets/svg/contact.svg" alt="Contact" class="contact-info">
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
