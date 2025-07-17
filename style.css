@@ -1,0 +1,190 @@
+/* Font Face Declarations */
+@font-face {
+    font-family: 'Atkinson Hyperlegible Next';
+    src: url('assets/fonts/Atkinson Hyperlegible Next/For Professional Use Only/Web Fonts/WOFF2/AtkinsonHyperlegibleNext-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible Next';
+    src: url('assets/fonts/Atkinson Hyperlegible Next/For Professional Use Only/Web Fonts/WOFF2/AtkinsonHyperlegibleNext-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Atkinson Hyperlegible Next', sans-serif;
+    line-height: 1.4;
+    color: rgb(55, 55, 55);
+    background-color: rgb(255, 255, 255);
+}
+
+/* Layout Structure */
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo */
+.logo {
+    height: 60px;
+    width: auto;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero-line-1 {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.hero-line-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.hero-2-1,
+.hero-2-2 {
+    height: 60px;
+    width: auto;
+}
+
+.rights-input {
+    width: 100px;
+    height: 60px;
+    font-size: 48px;
+    font-family: 'Atkinson Hyperlegible Next', sans-serif;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+/* Hero Details Section */
+.hero-details {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.pay-section,
+.earn-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pay-1,
+.pay-2,
+.earn-1,
+.earn-2 {
+    height: 40px;
+    width: auto;
+}
+
+.price-value,
+.token-value {
+    font-size: 36px;
+    font-weight: normal;
+    color: rgb(55, 55, 55);
+    min-width: 120px;
+    text-align: center;
+}
+
+/* Action Section */
+.action {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.doit-button {
+    height: 80px;
+    width: auto;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.doit-button:hover {
+    opacity: 0.8;
+}
+
+/* What Section */
+.what-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.what-title {
+    height: 60px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.what-content {
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgb(55, 55, 55);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.contact-info {
+    height: 40px;
+    width: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-line-2 {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero-details {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .rights-input {
+        width: 80px;
+        height: 50px;
+        font-size: 36px;
+    }
+    
+    .price-value,
+    .token-value {
+        font-size: 28px;
+    }
+}
