@@ -15,6 +15,11 @@ input.addEventListener('input', function() {
         this.value = this.value.slice(0, 2);
     }
     const value = parseInt(this.value);
-    usdPrice.textContent = (value * 24).toLocaleString();
-    prTokens.textContent = value.toLocaleString();
+    if (isNaN(value) || this.value === '') {
+        usdPrice.textContent = '';
+        prTokens.textContent = '';
+    } else {
+        usdPrice.textContent = (value * 24).toLocaleString();
+        prTokens.textContent = value.toLocaleString();
+    }
 });
