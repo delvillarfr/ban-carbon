@@ -175,10 +175,15 @@ main {
 }
 
 .doit-button {
-    height: 200px;
-    width: auto;
+    display: inline-block;
+    line-height: 0;
     cursor: pointer;
     transition: opacity 0.2s;
+}
+
+.doit-button img {
+    height: 200px;
+    width: auto;
 }
 
 .doit-button:hover {
