@@ -19,7 +19,7 @@ input.addEventListener('input', function() {
         usdPrice.textContent = '';
         prTokens.textContent = '';
     } else {
-        usdPrice.textContent = (value * 29).toLocaleString();
+        usdPrice.textContent = (value * 24).toLocaleString();
         prTokens.textContent = value.toLocaleString();
     }
 });
