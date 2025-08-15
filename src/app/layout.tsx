@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { atkinson } from '@/app/ui/fonts';
 
 export const metadata: Metadata = {
   title: "Ultra Civic: Buy + Retire Pollution Rights",
@@ -14,9 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        {children}
-      </body>
+      <body className={`${atkinson.className}`}>{children}</body>
     </html>
   );
 }

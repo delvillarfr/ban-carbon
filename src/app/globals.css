@@ -1,24 +1,3 @@
-@font-face {
-  font-family: 'Atkinson Hyperlegible Next';
-  src: url('/fonts/AtkinsonHyperlegibleNext-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Atkinson Hyperlegible Next';
-  src: url('/fonts/AtkinsonHyperlegibleNext-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Atkinson Hyperlegible Next';
-  src: url('/fonts/AtkinsonHyperlegibleNext-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-}
-
 :root {
   --background: rgb(253, 249, 250);
   --foreground: rgb(55, 55, 55);
@@ -46,9 +25,6 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Atkinson Hyperlegible Next', Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   line-height: 1.4;
 }
 
@@ -99,7 +75,6 @@ main {
 .rights-input {
     width: 110px;
     height: 65px;
-    font-family: 'Atkinson Hyperlegible Next', sans-serif;
     font-size: 80px;
     color: rgb(0, 0, 0);
     background: transparent;
@@ -134,7 +109,6 @@ main {
 /* Custom blinking cursor */
 .custom-cursor {
     position: absolute;
-    font-family: 'Atkinson Hyperlegible Next', sans-serif;
     font-size: 80px;
     color: rgb(0, 0, 0);
     line-height: 1;
