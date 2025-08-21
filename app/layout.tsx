@@ -4,8 +4,7 @@ import { atkinson } from '@/app/ui/fonts';
 
 export const metadata: Metadata = {
   title: "Retire CO2 Permits",
-  description: `Ultra Civic lets you buy and retire polluters' legal rights to
-    emit carbon dioxide.`,
+  description: "Retire CO2 Permits from the Regional Greenhouse Gas Initiative.",
 };
 
 export default function RootLayout({
