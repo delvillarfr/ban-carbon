@@ -24,6 +24,25 @@ export default function Home() {
             </h1>
           </div>
         </section>
+
+        <section className="explain-container">
+        <div>
+          <Image
+            src="/explain-1.svg"
+            alt="Do It"
+            width={2030}
+            height={2030}
+          />
+        </div>
+        <div>
+          <Image
+            src="/explain-2.svg"
+            alt="Do It"
+            width={2030}
+            height={2030}
+          />
+        </div>
+        </section>
         
         <section className="action">
             <a
