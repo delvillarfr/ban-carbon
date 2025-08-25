@@ -1,22 +1,10 @@
+/*
+  Leaving these colors as variables to update them
+  when adding dark-mode support.
+*/
 :root {
-  --background: rgb(253, 249, 250);
-  --foreground: rgb(55, 55, 55);
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: rgb(253, 249, 250);
-    --foreground: rgb(55, 55, 55);
-  }
-}
-
-html,
-body {
-  overflow-x: hidden;
-}
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+  --background-color: rgb(253, 249, 250);
+  --color: rgb(55, 55, 55);
 }
 
 * {
@@ -26,17 +14,10 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  max-width: 900px;
+  color: var(--color);
+  background-color: var(--background-color);
+  max-width: 1200px;
   margin: auto;
-  padding: 20px;
-}
-
-/* Layout Structure */
-header {
-    text-align: left;
-    line-height: 0;
 }
 
 .logo {
@@ -44,73 +25,7 @@ header {
     width: clamp(100px, 30vw, 180px);
 }
 
-.hero-container,
-.action {
-    text-align: center;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-}
-
-.hero-container {
-    flex-direction: column;
-    height: clamp(300px, 70vh, 450px);
-}
-
-.hero-container div {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.hero-container div {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.hero-line-1 {
-    font-size: clamp(2rem, 5vw, 2.5rem);
-}
-
-.hero-line-2 {
-    font-size: clamp(3rem, 7.5vw, 3.75rem);
-}
-
-.explain-container {
-    display: flex;
-    gap: 10vw;
-    justify-content: center;
-}
-.explain-container img {
-    width: 100%;
-    height: auto;
-}
-
-.action {
-    align-items: center;
-    height: clamp(200px, 70vh, 350px);
-}
-
-.doit-button {
-    line-height: 0;
-    cursor: pointer;
-    transition: transform 0.2s;
-    width: clamp(200px, 40vw, 250px);
-    height: auto;
-}
-
-.doit-button img {
-    width: 100%;
-    height: auto;
-}
-
-.doit-button:hover {
-    transform: scale(1.2);
-}
-
-p a {
-    color: rgb(55, 55, 55);
-    text-decoration: underline dotted 2px;
-    
+a {
+  color: var(--color);
+  text-decoration: none;
 }
