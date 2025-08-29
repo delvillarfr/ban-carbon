@@ -3,8 +3,8 @@ import "./globals.css";
 import { atkinson } from '@/app/ui/fonts';
 
 export const metadata: Metadata = {
-  title: "Retire CO2 Permits",
-  description: "Retire CO2 Permits from the Regional Greenhouse Gas Initiative.",
+  title: "burn burn - Burn CO2 Permits",
+  description: "Burn the legal permits that polluters need to emit CO2. Take direct action against climate change by destroying carbon emission allowances from the Regional Greenhouse Gas Initiative.",
 };
 
 export default function RootLayout({

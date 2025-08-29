@@ -4,9 +4,17 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <>
-      <header>
-        <nav>
-          <Link href="/">
+      <main>
+        <section className="landing">
+          <video
+           className="background-video"
+           autoPlay muted loop playsInline
+           preload="metadata"
+           poster="/ravenswood-poster.jpg"
+          >
+            <source src="/ravenswood.mp4" type="video/mp4" />
+          </video>
+          <header>
             <Image
               src="/logo.svg"
               alt="Ultra Civic"
@@ -14,19 +22,27 @@ export default function Home() {
               width={1750}
               height={401}
             />
-          </Link>
-        </nav>
-      </header>
-
-      <main>
-        <section>
-          <h1>
-            Burn the legal permits that polluters need to emit CO2.
-          </h1>
+          </header>
+          <div className="hero">
+            <h1>
+              Burn the legal permits<br />
+              that polluters need<br />
+              to emit CO<sub>2</sub>.
+            </h1>
+          </div>
+          <div className="cta">
+            <a
+              href="https://buy.stripe.com/4gMeVe5U9eZS5KS5349bO02"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Burn CO<sub>2</sub> permits now.
+            </a>
+          </div>
         </section>
+
         <section>
           <h2>
-            They're U.S. power plants who use coal, oil, or gas.
           </h2>
         </section>
       </main>

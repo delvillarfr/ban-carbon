@@ -1,10 +1,7 @@
-/*
-  Leaving these colors as variables to update them
-  when adding dark-mode support.
-*/
 :root {
-  --background-color: rgb(253, 249, 250);
-  --color: rgb(55, 55, 55);
+  --color: rgb(0, 0, 0);
+  --background-color: rgb(255, 255, 255);
+  --min-desktop-width: 880px;
 }
 
 * {
@@ -16,16 +13,91 @@
 body {
   color: var(--color);
   background-color: var(--background-color);
+}
+
+section {
   max-width: 1200px;
   margin: auto;
 }
 
-.logo {
-    height: auto;
-    width: clamp(100px, 30vw, 180px);
+.landing {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  align-items: center;
 }
 
-a {
-  color: var(--color);
+.landing img {
+  width: clamp(100px, 20vw, 150px);
+  height: auto;
+  flex-grow: 1;
+}
+
+.hero {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 7.5vw, 3rem);
+  letter-spacing: clamp(0.03rem, 0.075vw, 0.05rem);
+}
+
+.landing header,
+.cta {
+  display: flex;
+  align-items: center;
+}
+
+.landing header {
+  flex-grow: 2;
+}
+
+.cta a {
+  background-color: var(--color);
+  color: var(--background-color);
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
   text-decoration: none;
+  box-shadow: 2px 4px 8px rgb(220, 220, 220);
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out 4s forwards;
+}
+@keyframes fadeIn {
+  from {opacity: 0;} to {opacity: 1;}
+}
+.cta a:hover,
+.cta a:focus-visible {
+  background-color: rgb(70, 70, 70);
+}
+
+/* Arrange the CTA at the top right corner in Desktop */
+@media (min-width: 810px) {
+  .cta {
+    order: 1;
+    flex-grow: 1;
+    justify-content: right;
+    margin-left: auto;
+  }
+  .landing {
+    padding: 0 48px;
+  }
+  .landing header {
+    order: 2;
+    flex-grow: 1;
+  }
+  .hero { order: 3; }
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 150vh;
+  object-fit: none;
+  z-index: -1;
 }
