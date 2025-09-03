@@ -1,6 +1,10 @@
-import { Atkinson_Hyperlegible } from 'next/font/google';
+import { Inter } from 'next/font/google';
  
-export const atkinson = Atkinson_Hyperlegible({
+export const inter = Inter({
     subsets: ['latin'],
-    weight: ["400", "700"]
+    weight: [
+        "100", "200", "300", "400", "500", "600",
+        "700", "800", "900"
+    ]
+
 });

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { atkinson } from '@/app/ui/fonts';
+import { inter } from '@/app/ui/fonts';
 
 export const metadata: Metadata = {
   title: "burn burn - Burn CO2 Permits",
@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
     <link rel="shortcut icon" href="/icon.svg" type="image/x-icon"/>
-      <body className={`${atkinson.className}`}>{children}</body>
+      <body className={`${inter.className}`}>{children}</body>
     </html>
   );
 }
