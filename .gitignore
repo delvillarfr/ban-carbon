@@ -40,3 +40,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# design files
+/design/**/proxy/
+/design/**/cache/
+/design/**/thumbs/
+/design/**/in/
+/design/**/out/
+*.backup.kdenlive
+*.autosave.kdenlive
+*.kdenlive~
+
