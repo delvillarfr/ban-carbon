@@ -1,9 +1,15 @@
+"use client";
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { useScrolledPastTop } from './lib/useScrolledPastTop';
 
 export default function Home() {
+  const scrolled = useScrolledPastTop();
   return (
     <>
+      <div id="sentinel"></div>
+
       <div className="background-video">
         <video
           autoPlay muted loop playsInline
@@ -21,6 +27,7 @@ export default function Home() {
               alt="BAN CARBON wordmark"
               width={1750}
               height={401}
+              className={`hero-img ${scrolled ? 'fade-out' : 'fade-in'}`}
             />
           </a>
           <a
