@@ -22,7 +22,7 @@ export default function Home() {
       <header className="navbar-container">
         <div className="navbar">
           <div className="brand-container">
-            <a href="/" className={`brand ${!scrolled ? 'fade-in' : 'fade-out'}`}>
+            <Link href="/" className={`brand ${!scrolled ? 'fade-in' : 'fade-out'}`}>
               <Image
                 src="/wordmark-dark.svg"
                 alt="BAN CARBON wordmark"
@@ -30,8 +30,8 @@ export default function Home() {
                 height={19}
                 className="wordmark"
               />
-            </a>
-            <a href="/" className={`brand ${scrolled ? 'fade-in' : 'fade-out'}`}>
+            </Link>
+            <Link href="/" className={`brand ${scrolled ? 'fade-in' : 'fade-out'}`}>
               <Image
                 src="/logo-dark.svg"
                 alt="BAN CARBON logo"
@@ -39,7 +39,7 @@ export default function Home() {
                 height={17}
                 className="logo"
               />
-            </a>
+            </Link>
           </div>
           <a
             href="https://buy.stripe.com/4gMeVe5U9eZS5KS5349bO02"
