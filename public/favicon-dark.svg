@@ -2,30 +2,90 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="15mm"
-   height="15mm"
-   viewBox="0 0 15 15"
+   width="17mm"
+   height="17mm"
+   viewBox="0 0 17 17"
    version="1.1"
    id="svg1"
+   sodipodi:docname="brand.svg"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   xml:space="preserve"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs1" />
-  <g
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.3536"
+     inkscape:cx="215"
+     inkscape:cy="687.3"
+     inkscape:window-width="1920"
+     inkscape:window-height="1043"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"><inkscape:grid
+       id="grid2"
+       units="mm"
+       originx="-67.84"
+       originy="-89.4"
+       spacingx="0.2646"
+       spacingy="0.2646"
+       empcolor="#0099e5"
+       empopacity="0.302"
+       color="#0099e5"
+       opacity="0.149"
+       empspacing="5"
+       enabled="true"
+       visible="false" /><inkscape:page
+       x="0"
+       y="0"
+       width="17"
+       height="17"
+       id="page2"
+       margin="0"
+       bleed="0" /></sodipodi:namedview><defs
+     id="defs1" /><g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-22.91,-40.88)">
-    <g
-       id="g8"
-       transform="translate(-14.22,5.987)">
-      <path
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.63282;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:1.1;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
-         id="path65-6-2-2-2"
-         d="M 25.14,19.85 22.43,26.4 15.88,29.11 9.331,26.4 6.619,19.85 9.331,13.3 15.88,10.59 22.43,13.3 Z"
-         transform="matrix(-0.7018,-0.2908,0.2908,-0.7018,50,60.94)" />
-      <path
-         id="path65-6-2-2-2-9"
-         style="stroke-width:2.00004;stroke-miterlimit:1.1;paint-order:stroke markers fill"
-         d="m 42.73,39.68 3.84,-3.84 h 1.72 l 3.83,3.83 v 5.43 l -3.83,3.84 h -1.72 l -3.84,-3.83 z" />
-    </g>
-  </g>
-</svg>
+     transform="translate(-67.84,-89.4)"><g
+       id="g15"><rect
+         style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.732687;stroke-miterlimit:0;paint-order:stroke markers fill"
+         id="rect5"
+         width="17"
+         height="17"
+         x="67.84"
+         y="89.4" /><g
+         id="g8"
+         transform="translate(31.71,55.51)"
+         inkscape:export-filename="../public/favicon.svg"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96"><path
+           sodipodi:type="star"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.63282;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:1.1;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+           id="path65-6-2-2-2"
+           inkscape:flatsided="true"
+           sodipodi:sides="8"
+           sodipodi:cx="15.88"
+           sodipodi:cy="19.85"
+           sodipodi:r1="9.261"
+           sodipodi:r2="8.556"
+           sodipodi:arg1="0"
+           sodipodi:arg2="0.3927"
+           inkscape:rounded="0"
+           inkscape:randomized="0"
+           d="M 25.14,19.85 22.43,26.4 15.88,29.11 9.331,26.4 6.619,19.85 9.331,13.3 15.88,10.59 22.43,13.3 Z"
+           transform="matrix(-0.7018,-0.2908,0.2908,-0.7018,50,60.94)" /><path
+           id="path65-6-2-2-2-9"
+           style="stroke-width:2.00004;stroke-miterlimit:1.1;paint-order:stroke markers fill"
+           d="m 42.73,39.68 3.84,-3.84 h 1.72 l 3.83,3.83 v 5.43 l -3.83,3.84 h -1.72 l -3.84,-3.83 z"
+           sodipodi:nodetypes="ccccccccc" /></g></g></g></svg>
