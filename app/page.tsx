@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useScrolledPastTop } from './lib/useScrolledPastTop';
+import { useScrolledPastTop } from '@/app/lib/useScrolledPastTop';
 
 export default function Home() {
   const scrolled = useScrolledPastTop();
@@ -21,15 +21,26 @@ export default function Home() {
 
       <header className="navbar-container">
         <div className="navbar">
-          <a href="/" className="brand">
-            <Image
-              src="/wordmark-dark.svg"
-              alt="BAN CARBON wordmark"
-              width={1750}
-              height={401}
-              className={`hero-img ${scrolled ? 'fade-out' : 'fade-in'}`}
-            />
-          </a>
+          <div className="brand-container">
+            <a href="/" className={`brand ${!scrolled ? 'fade-in' : 'fade-out'}`}>
+              <Image
+                src="/wordmark-dark.svg"
+                alt="BAN CARBON wordmark"
+                width={152}
+                height={19}
+                className="wordmark"
+              />
+            </a>
+            <a href="/" className={`brand ${scrolled ? 'fade-in' : 'fade-out'}`}>
+              <Image
+                src="/logo-dark.svg"
+                alt="BAN CARBON logo"
+                width={17}
+                height={17}
+                className="logo"
+              />
+            </a>
+          </div>
           <a
             href="https://buy.stripe.com/4gMeVe5U9eZS5KS5349bO02"
             target="_blank"
