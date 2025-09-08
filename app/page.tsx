@@ -54,7 +54,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main>
+      <main className="one-pager">
         <section className="hero">
           <div className="hero-container">
             <h1 className="hero-line">
