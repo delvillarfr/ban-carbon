@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useScrolledPastTop } from '@/app/lib/useScrolledPastTop';
+import EmailForm from '@/app/ui/EmailForm';
 
 export default function Home() {
   const scrolled = useScrolledPastTop();
@@ -64,6 +65,7 @@ export default function Home() {
             </h1>
           </div>
         </section>
+        {/*
         <section className="email">
         <div className="email-field">your@email.com</div>
           <a
@@ -75,6 +77,8 @@ export default function Home() {
             Get launch alert
           </a>
         </section>
+        */}
+       <EmailForm />
       </main>
 
       {/*
