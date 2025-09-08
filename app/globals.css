@@ -46,8 +46,10 @@ body {
 }
 
 .navbar {
-  max-width: 1300px;
-  padding: 32px 96px 12px 96px;
+  max-width: 1200px;
+  padding-top: 32px;
+  padding-bottom: 12px;
+  padding-left: 10px;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -77,6 +79,7 @@ body {
   width: 160px;
   height: auto;
 }
+
 .logo {
   height: 30px;
   width: auto;
@@ -113,8 +116,9 @@ body {
 }
 
 .hero {
+  height: 80vh;
   display: flex;
-  height: 100vh;
+  align-items: center;
   justify-content: center;
 }
 
@@ -122,15 +126,50 @@ body {
   display: flex;
   align-items: center;
   padding-right: clamp(0px, 15vw, 200px);
+  padding-left: 15px;
+  padding-top: 10vh;
 }
 
 .hero-line {
   font-size: 6rem;
-  font-size: clamp(4rem, 10vw, 6rem);
+  font-size: clamp(2rem, 10vw, 6rem);
   font-weight: 600;
   letter-spacing: -0.045em;
   word-spacing: 0.1em;
 }
+
+.email {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+
+.email-field {
+  padding: 10px;
+  backdrop-filter: blur(4px);
+  background-color: rgb(255, 255, 255);
+  border-radius: 3px;
+  cursor: pointer;
+  /* right, down, fade, size */
+  box-shadow: 0px 0px 20px -5px rgb(255, 255, 255);
+
+}
+
+.email-cta {
+  display: block;
+  font-weight: 500;
+  background-color: var(--color);
+  color: var(--background-color);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 10px;
+}
+
 
 /*
 

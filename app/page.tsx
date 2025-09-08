@@ -41,6 +41,7 @@ export default function Home() {
               />
             </Link>
           </div>
+          {/*
           <a
             href="https://buy.stripe.com/4gMeVe5U9eZS5KS5349bO02"
             target="_blank"
@@ -49,6 +50,7 @@ export default function Home() {
           >
             Burn CO<sub>2</sub> permits
           </a>
+          */}
         </div>
       </header>
 
@@ -62,9 +64,18 @@ export default function Home() {
             </h1>
           </div>
         </section>
+        <section className="email">
+        <div className="email-field">your@email.com</div>
+          <a
+            href="https://buy.stripe.com/4gMeVe5U9eZS5KS5349bO02"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="email-cta"
+          >
+            Get launch alert
+          </a>
+        </section>
       </main>
-
-      <div className="container"> </div>
 
       {/*
       <footer>
