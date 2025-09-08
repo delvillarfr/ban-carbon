@@ -80,7 +80,7 @@ body {
 }
 
 .wordmark {
-  width: 160px;
+  width: clamp(120px, 20vw, 160px);
   height: auto;
 }
 
