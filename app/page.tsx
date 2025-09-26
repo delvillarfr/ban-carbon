@@ -11,13 +11,20 @@ export default function Home() {
     <>
       <div id="sentinel"></div>
 
-      <div className="background-video">
+      <div className="background-hero">
         <video
           autoPlay muted loop playsInline
           preload="metadata"
         >
           <source src="/chimney-light-lq.mp4" type="video/mp4" />
         </video>
+        <Image
+          src="/rggi-power-plants.svg"
+          alt="RGGI power plants"
+          width={2400}
+          height={1350}
+          className="rggi-power-plants"
+        />
       </div>
 
       <header className="navbar-container">
@@ -55,17 +62,18 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="one-pager">
-        <section className="hero">
-          <div className="hero-container">
-            <h1 className="hero-line">
-              Burn the permits<br />
-              polluters need<br />
-              to emit CO<sub>2</sub>.
-            </h1>
-          </div>
-        </section>
-        {/*
+      <main>
+        <div className="full-screen">
+          <section className="hero">
+            <div className="hero-container">
+              <h1 className="hero-line">
+                Burn the permits<br />
+                polluters need<br />
+                to emit CO<sub>2</sub>.
+              </h1>
+            </div>
+          </section>
+          {/*
         <section className="email">
         <div className="email-field">your@email.com</div>
           <a
@@ -78,7 +86,18 @@ export default function Home() {
           </a>
         </section>
         */}
-       <EmailForm />
+          <EmailForm />
+        </div>
+        <div className="full-screen">
+          <section className="explainer-polluters">
+            <div className="explainer-polluters-container">
+              <h2 className="explainer-line">
+                They're&nbsp;U.S. power&nbsp;plants
+                that&nbsp;still&nbsp;burn fossil&nbsp;fuels.
+              </h2>
+            </div>
+          </section>
+        </div>
       </main>
 
       {/*
