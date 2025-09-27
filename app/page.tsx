@@ -11,21 +11,30 @@ export default function Home() {
     <>
       <div id="sentinel"></div>
 
-      <div className="background-hero">
-        <video
-          autoPlay muted loop playsInline
-          preload="metadata"
-        >
-          <source src="/chimney-light-lq.mp4" type="video/mp4" />
-        </video>
-        <Image
-          src="/rggi-power-plants.svg"
-          alt="RGGI power plants"
-          width={2400}
-          height={1350}
-          className="rggi-power-plants"
-        />
+      <div className="background-wrapper">
+        <div className="intro-background chimney-background">
+          <div className="intro-media">
+            <video
+              autoPlay muted loop playsInline
+              preload="metadata"
+            >
+              <source src="/chimney-darkgray.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <div className="intro-background">
+          <div className="intro-media">
+            <Image
+              src="/rggi-power-plants.svg"
+              alt="RGGI power plants"
+              width={2400}
+              height={1350}
+              className="rggi-power-plants"
+            />
+          </div>
+        </div>
       </div>
+
 
       <header className="navbar-container">
         <div className="navbar">
@@ -41,7 +50,7 @@ export default function Home() {
             </Link>
             <Link href="/" className={`brand ${scrolled ? 'fade-in' : 'fade-out'}`}>
               <Image
-                src="/logo-dark.svg"
+                src="/favicon-dark.svg"
                 alt="BAN CARBON logo"
                 width={17}
                 height={17}
@@ -52,30 +61,30 @@ export default function Home() {
         </div>
       </header>
 
-      <main>
-        <div className="full-screen">
-          <section className="hero">
-            <div className="hero-container">
+      <main className="inherit-dimensions">
+        <section className="inherit-dimensions">
+          <div className="landing">
+            <div className="hero">
               <h1 className="hero-line">
                 Burn the permits<br />
                 polluters need<br />
                 to emit CO<sub>2</sub>.
               </h1>
             </div>
-          </section>
-          <EmailForm />
-        </div>
-        <div className="full-screen">
-          <section className="explainer-polluters">
-            <div className="explainer-polluters-container">
-              <h2 className="explainer-line">
-                They're&nbsp;U.S. power&nbsp;plants
-                that&nbsp;still&nbsp;burn fossil&nbsp;fuels.
-              </h2>
-            </div>
-          </section>
-        </div>
+            <EmailForm />
+          </div>
+        </section>
       </main>
+      {/*
+        <section className="explainer-polluters">
+          <div className="explainer-polluters-container">
+            <h2 className="explainer-line">
+              They're&nbsp;U.S. power&nbsp;plants
+              that&nbsp;still&nbsp;burn fossil&nbsp;fuels.
+            </h2>
+          </div>
+        </section>
+    */}
 
       {/*
       <footer>

@@ -1,7 +1,6 @@
 :root {
   --color: rgb(0, 0, 0);
   --background-color: rgb(255, 255, 255);
-  --min-desktop-width: 810px;
 }
 
 * {
@@ -12,6 +11,7 @@
 
 html,
 body {
+  width: 100%;
   height: 100%;
 }
 
@@ -27,37 +27,51 @@ body {
   width: 1px;
 }
 
-.background-hero {
+.background-wrapper {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  min-height: 200vh;
-  aspect-ratio: 8/9;
   z-index: -1;
-  overflow: hidden;
+}
+
+.intro-background {
+  width: 100%;
+  container-type: size;
+  height: clamp(900px, 180cqw, 1200px);
+  overflow: clip;
   display: flex;
   flex-direction: column;
 }
 
-.background-hero video {
-  width: 100%;
-  height: 50%;
-  object-fit: cover;
-  /* Position chimney in left third while maintaining alignment. */
-  object-position: 20% 100%;
+.chimney-background {
+  background-color: rgb(136, 136, 136);
 }
 
-.background-hero .rggi-power-plants {
-  width: 100%;
-  height: 50%;
-  object-fit: cover;
-  object-position: 20% 100%;
+.intro-media {
+  height: 100%;
+  container-type: size;
+  aspect-ratio: 16/9;
+  /* margin-left uses parent's dimensions; transform uses own dimensions */
+  margin-left: clamp(50%, 80%, calc(50% + 270px));
+  transform: translateX(calc(-0.31 * 100cqh * 16 / 9));
+}
+
+.intro-media video {
+  height: 100%;
+  width: auto;
+}
+
+.intro-media .rggi-power-plants {
+  height: 100%;
+  width: auto;
 }
 
 .navbar-container {
   position: fixed;
   width: 100%;
   top: 0;
-  backdrop-filter: blur(4px);
+  /*backdrop-filter: blur(4px);*/
 }
 
 .navbar {
@@ -111,37 +125,38 @@ body {
   transition: opacity 0.2s ease;
 }
 
-.full-screen {
+.inherit-dimensions {
+  height: 100%;
   width: 100%;
-  height: 100vh;
+}
+
+.landing {
+  height: 650px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero {
-  height: 70%;
+  height: 50%;
   display: flex;
-  align-items: center;
+  align-items: end;
   justify-content: center;
 }
 
-.hero-container {
-  display: flex;
-  align-items: center;
-  padding-top: 10%;
-}
-
 .hero-line {
-  font-size: clamp(2rem, 10vw, 6rem);
+  font-size: clamp(2rem, 8vw, 4rem);
   font-weight: 600;
   letter-spacing: -0.045em;
   word-spacing: 0.1em;
 }
 
 .email {
-  height: 30%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   gap: 10px;
 }
 
