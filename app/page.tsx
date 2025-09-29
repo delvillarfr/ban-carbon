@@ -22,7 +22,7 @@ export default function Home() {
             </video>
           </div>
         </div>
-        <div className="intro-background">
+        <div className="intro-background gradient-background">
           <div className="intro-media">
             <Image
               src="/rggi-power-plants.svg"

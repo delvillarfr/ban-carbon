@@ -45,7 +45,7 @@ body {
 }
 
 .chimney-background {
-  background-color: rgb(136, 136, 136);
+  background-color: rgb(146, 146, 146);
 }
 
 .intro-media {
@@ -55,11 +55,18 @@ body {
   /* margin-left uses parent's dimensions; transform uses own dimensions */
   margin-left: clamp(50%, 80%, calc(50% + 270px));
   transform: translateX(calc(-0.31 * 100cqh * 16 / 9));
+  position: relative;
 }
 
 .intro-media video {
   height: 100%;
   width: auto;
+}
+
+.gradient-background {
+  background: url("/gray-to-white-grainy.png");
+  background-size: auto 100%;
+  background-repeat: repeat-x;
 }
 
 .intro-media .rggi-power-plants {
