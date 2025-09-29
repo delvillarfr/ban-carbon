@@ -27,9 +27,16 @@ export default function Home() {
             <Image
               src="/rggi-power-plants.svg"
               alt="RGGI power plants"
-              width={2400}
-              height={1350}
+              width={1577}
+              height={887}
               className="rggi-power-plants"
+            />
+            <Image
+              src="/rggi-power-plants-bright.svg"
+              alt="RGGI power plants"
+              width={1577}
+              height={887}
+              className="rggi-power-plants rggi-power-plants-glow"
             />
           </div>
         </div>
