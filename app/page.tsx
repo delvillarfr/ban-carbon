@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useScrolledPastTop } from '@/app/lib/useScrolledPastTop';
 import EmailForm from '@/app/ui/EmailForm';
+import { courier } from '@/app/ui/fonts';
 
 export default function Home() {
   const scrolled = useScrolledPastTop();
