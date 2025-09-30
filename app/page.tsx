@@ -70,15 +70,17 @@ export default function Home() {
 
       <main className="inherit-dimensions">
         <section className="inherit-dimensions">
-          <div className="landing">
-            <div className="hero">
-              <h1 className="hero-line">
-                Burn the permits<br />
-                polluters need<br />
-                to emit CO<sub>2</sub>.
-              </h1>
+          <div className="landing-container">
+            <div className="landing">
+              <div className="hero">
+                <h1 className="hero-line">
+                  Burn the permits<br />
+                  polluters need<br />
+                  to emit CO<sub>2</sub>.
+                </h1>
+              </div>
+              <EmailForm />
             </div>
-            <EmailForm />
           </div>
         </section>
       </main>
