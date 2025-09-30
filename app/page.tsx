@@ -70,7 +70,7 @@ export default function Home() {
 
       <main className="inherit-dimensions">
         <section className="inherit-dimensions">
-          <div className="landing-container">
+          <div className="standard-container">
             <div className="landing">
               <div className="hero">
                 <h1 className="hero-line">
@@ -83,17 +83,21 @@ export default function Home() {
             </div>
           </div>
         </section>
-      </main>
-      {/*
-        <section className="explainer-polluters">
-          <div className="explainer-polluters-container">
-            <h2 className="explainer-line">
-              They're&nbsp;U.S. power&nbsp;plants
-              that&nbsp;still&nbsp;burn fossil&nbsp;fuels.
-            </h2>
+        <section className="inherit-dimensions">
+          <div className="standard-container">
+            <div className="explainer-polluters">
+              <div className="explainer-polluters-line-container">
+                <h2 className="explainer-line">
+                  They're U.S.<br />
+                  power plants<br />
+                  still burning<br />
+                  fossil fuels.
+                </h2>
+              </div>
+            </div>
           </div>
         </section>
-    */}
+      </main>
 
       {/*
       <footer>

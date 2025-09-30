@@ -2,6 +2,7 @@
   --color: rgb(0, 0, 0);
   --background-color: rgb(255, 255, 255);
   --standard-height: clamp(900px, 180cqw, 1200px);
+  --standard-width: clamp(320px, 100%, 600px);
 }
 
 * {
@@ -137,10 +138,9 @@ body {
   width: 100%;
 }
 
-.landing-container {
+.standard-container {
   height: var(--standard-height);
   width: 100%;
-  padding-bottom: auto;
 }
 
 .landing {
@@ -197,25 +197,20 @@ body {
 }
 
 .explainer-polluters {
-  height: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
+  width: 100%;
 }
 
-.explainer-polluters-container {
-  display: flex;
-  justify-content: flex-end;
-  width: 75%;
+.explainer-polluters-line-container {
+  padding-right: 30px;
+  padding-top: 100px;
 }
 
 .explainer-line {
-  font-size: clamp(1.2rem, 6vw, 3.6rem);
-  font-weight: 600;
+  font-size: clamp(1.4rem, 5.6vw, 2.8rem);
+  font-weight: 400;
   letter-spacing: -0.045em;
   word-spacing: 0.1em;
 }
