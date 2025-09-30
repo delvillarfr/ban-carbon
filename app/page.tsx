@@ -12,32 +12,28 @@ export default function Home() {
     <>
       <div id="sentinel"></div>
 
-      <div className="background-wrapper">
-        <div className="intro-background chimney-background">
-          <div className="intro-media">
-            <video
-              autoPlay muted loop playsInline
-              preload="metadata"
-            >
+      <div className="landing-background-wrapper">
+        <div className="landing-background chimney-gray">
+          <div className="landing-media">
+            <video autoPlay muted loop playsInline preload="metadata">
               <source src="/chimney-darkgray.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
-        <div className="intro-background gradient-background">
-          <div className="intro-media">
+        <div className="landing-background gradient-background">
+          <div className="landing-media">
             <Image
               src="/rggi-power-plants.svg"
-              alt="RGGI power plants"
+              alt="Map of northeastern USA with chimney"
               width={1577}
               height={887}
-              className="rggi-power-plants"
             />
             <Image
               src="/rggi-power-plants-bright.svg"
-              alt="RGGI power plants"
+              alt="Map of RGGI power plants sized by CO2 emissions"
               width={1577}
               height={887}
-              className="rggi-power-plants rggi-power-plants-glow"
+              className="top-left-position"
             />
           </div>
         </div>
@@ -69,9 +65,9 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="inherit-dimensions">
-        <section className="inherit-dimensions">
-          <div className="standard-container">
+      <main >
+        <section >
+          <div className="landing-container">
             <div className="landing">
               <div className="hero">
                 <h1 className="hero-line">
@@ -84,8 +80,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="inherit-dimensions">
-          <div className="standard-container">
+        <section >
+          <div className="explainer-polluters-container">
             <div className="explainer-polluters">
               <div className="explainer-polluters-line-container">
                 <h2 className="explainer-line">
@@ -99,11 +95,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      {/*
-      <footer>
-      </footer>
-    */}
     </>
   );
 }

@@ -1,50 +1,46 @@
+/* Variable definitions */
 :root {
   --color: rgb(0, 0, 0);
   --background-color: rgb(255, 255, 255);
-  --standard-height: clamp(900px, 180cqw, 1200px);
+  --landing-height: clamp(900px, 180cqw, 1200px);
   --standard-width: clamp(320px, 100%, 600px);
 }
 
+
+/* Elements */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
-
 body {
   color: var(--color);
   background-color: var(--background-color);
 }
-
-#sentinel {
-  position: absolute;
-  top: 0;
-  height: 1px;
-  width: 1px;
+main,
+section {
+  height: 100%;
+  width: 100%;
 }
 
-.background-wrapper {
+
+/* Landing video and USA map */
+.landing-background-wrapper {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: -1;
 }
-
-.intro-background {
+.landing-background {
   width: 100%;
   container-type: size;
-  height: var(--standard-height);
+  height: var(--landing-height);
   overflow: clip;
   display: flex;
   flex-direction: column;
 }
-
-.chimney-background {
-  background-color: rgb(146, 146, 146);
-}
-
-.intro-media {
+.landing-media {
   height: 100%;
   container-type: size;
   aspect-ratio: 16/9;
@@ -53,36 +49,38 @@ body {
   transform: translateX(calc(-0.31 * 100cqh * 16 / 9));
   position: relative;
 }
-
-.intro-media video {
+.landing-media * {
   height: 100%;
   width: auto;
 }
-
+.chimney-gray {
+  background-color: rgb(146, 146, 146);
+}
 .gradient-background {
   background: url("/gray-to-white-grainy.png");
   background-size: auto 100%;
   background-repeat: repeat-x;
 }
-
-.intro-media .rggi-power-plants {
-  height: 100%;
-  width: auto;
-}
-
-.rggi-power-plants-glow {
+.top-left-position {
   position: absolute;
   top: 0;
   left: 0;
 }
 
+
+/* Navigation bar */
+#sentinel {
+  position: absolute;
+  top: 0;
+  height: 1px;
+  width: 1px;
+}
 .navbar-container {
   position: fixed;
   width: 100%;
   top: 0;
   /*backdrop-filter: blur(4px);*/
 }
-
 .navbar {
   max-width: 1200px;
   padding-top: 32px;
@@ -93,14 +91,12 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-
 .brand-container {
   position: relative;
   width: 176px;
   height: 46px;
   padding: 8px;
 }
-
 .brand {
   position: absolute;
   top: 0;
@@ -112,57 +108,46 @@ body {
   justify-content: start;
   padding: 8px;
 }
-
 .wordmark {
   width: clamp(120px, 20vw, 160px);
   height: auto;
 }
-
 .logo {
   height: 30px;
   width: auto;
 }
-
 .fade-in {
   opacity: 1;
   transition: opacity 0.2s ease;
 }
-
 .fade-out {
   opacity: 0;
   transition: opacity 0.2s ease;
 }
 
-.inherit-dimensions {
-  height: 100%;
+
+/* Landing Content */
+.landing-container {
+  height: var(--landing-height);
   width: 100%;
 }
-
-.standard-container {
-  height: var(--standard-height);
-  width: 100%;
-}
-
 .landing {
   height: clamp(60%, 100vh, 100%);
   display: flex;
   flex-direction: column;
 }
-
 .hero {
   height: 50%;
   display: flex;
   align-items: end;
   justify-content: center;
 }
-
 .hero-line {
   font-size: clamp(2rem, 8vw, 4rem);
   font-weight: 600;
   letter-spacing: -0.045em;
   word-spacing: 0.1em;
 }
-
 .email {
   height: 50%;
   display: flex;
@@ -171,7 +156,6 @@ body {
   justify-content: center;
   gap: 10px;
 }
-
 .email-field {
   padding: 10px;
   backdrop-filter: blur(4px);
@@ -182,7 +166,6 @@ body {
   box-shadow: 0px 0px 20px -5px rgb(255, 255, 255);
   border: none;
 }
-
 .email-cta {
   display: block;
   font-weight: 500;
@@ -196,6 +179,8 @@ body {
   padding: 10px;
 }
 
+
+/* Explainer: polluters */
 .explainer-polluters {
   display: flex;
   flex-direction: column;
