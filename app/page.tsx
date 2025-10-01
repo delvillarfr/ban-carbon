@@ -14,14 +14,14 @@ export default function Home() {
 
       <div className="landing-background-wrapper">
         <div className="landing-background chimney-gray">
-          <div className="landing-media">
+          <div className="landing-media shift-right">
             <video autoPlay muted loop playsInline preload="metadata">
               <source src="/chimney-darkgray.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
         <div className="landing-background gradient-background">
-          <div className="landing-media">
+          <div className="landing-media shift-right">
             <Image
               src="/rggi-power-plants.svg"
               alt="Map of northeastern USA with chimney"
@@ -81,15 +81,51 @@ export default function Home() {
           </div>
         </section>
         <section >
-          <div className="explainer-polluters-container">
-            <div className="explainer-polluters">
-              <div className="explainer-polluters-line-container">
-                <h2 className="explainer-line">
-                  They're U.S.<br />
-                  power plants<br />
-                  still burning<br />
-                  fossil fuels.
-                </h2>
+          <div className="polluters-line">
+            <div className="polluters-line-container">
+              <h2 className="explainer-line">
+                They're U.S.<br />
+                power plants<br />
+                still burning<br />
+                fossil fuels.
+              </h2>
+            </div>
+          </div>
+          <div className="polluters-example">
+            <div className="polluters-example-container">
+              <Image
+                src="/astoria.png"
+                alt="Picture of Astoria Energy"
+                width={340}
+                height={340}
+                className="polluters-example-image"
+              />
+              <div className={`${courier.className} polluters-info`}>
+                <div className="percentage45-margin-top">
+                  <p>
+                    Astoria Energy
+                  </p>
+                </div>
+                <div>
+                  <p>
+                    Queens, N.Y.C.
+                  </p>
+                </div>
+                <div className="percentage10-margin-top">
+                  <p>
+                    CO<sub>2</sub> emissions in 2024:
+                  </p>
+                </div>
+                <div className="percentage2-margin-top">
+                  <p>
+                    3.2 million tonnes
+                  </p>
+                </div>
+                <div className="percentage2-margin-top">
+                  <p>
+                    = Bhutan or Iceland
+                  </p>
+                </div>
               </div>
             </div>
           </div>
