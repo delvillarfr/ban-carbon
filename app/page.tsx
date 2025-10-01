@@ -84,7 +84,7 @@ export default function Home() {
           <div className="polluters-line">
             <div className="polluters-line-container">
               <h2 className="explainer-line">
-                They're U.S.<br />
+                They&apos;re U.S.<br />
                 power plants<br />
                 still burning<br />
                 fossil fuels.
