@@ -20,21 +20,23 @@ export default function Home() {
             </video>
           </div>
         </div>
-        <div className="landing-background gradient-background">
-          <div className="landing-media shift-right">
-            <Image
-              src="/rggi-power-plants.svg"
-              alt="Map of northeastern USA with chimney"
-              width={1577}
-              height={887}
-            />
-            <Image
-              src="/rggi-power-plants-bright.svg"
-              alt="Map of RGGI power plants sized by CO2 emissions"
-              width={1577}
-              height={887}
-              className="top-left-position"
-            />
+        <div className="gradient-background">
+          <div className="landing-background">
+            <div className="landing-media shift-right">
+              <Image
+                src="/rggi-power-plants.svg"
+                alt="Map of northeastern USA with chimney"
+                width={1577}
+                height={887}
+              />
+              <Image
+                src="/rggi-power-plants-bright.svg"
+                alt="Map of RGGI power plants sized by CO2 emissions"
+                width={1577}
+                height={887}
+                className="top-left-position"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -131,10 +133,17 @@ export default function Home() {
           </div>
         </section>
         <section>
+          <div className="permits-line">
+            <div className="permits-line-container">
+              <h2 className="explainer-line">
+                They need a state permit<br />
+                to emit each ton of CO<sub>2</sub>.
+              </h2>
+            </div>
+          </div>
           <div className="laws-container">
             <div className="law law-1">
-              <div className={`law-text ${courier.className}`}>
-                <div className="document-content">
+                <div className={`document-content ${courier.className}`}>
                   <div className="document-title">
                     The Delaware Code
                   </div>
@@ -163,11 +172,9 @@ export default function Home() {
                     6.0 and 8.0
                   </p>
                 </div>
-              </div>
             </div>
             <div className="law law-2">
-              <div className={`law-text ${courier.className}`}>
-                <div className="document-content">
+                <div className={`document-content ${courier.className}`}>
                   <div className="document-title">
                     Maine Department of Environmental Protection
                   </div>
@@ -197,11 +204,9 @@ export default function Home() {
                     and 7 of this Chapter.
                   </p>
                 </div>
-              </div>
             </div>
             <div className="law law-3">
-              <div className={`law-text ${courier.className}`}>
-                <div className="document-content">
+                <div className={`document-content ${courier.className}`}>
                   <div className="document-title">
                     New Hampshire Code of Administrative Rules
                   </div>
@@ -226,11 +231,9 @@ export default function Home() {
                     Env-A 4605, Env-A 4607, and Env-A 4609.18; and...
                   </p>
                 </div>
-              </div>
             </div>
             <div className="law law-4">
-              <div className={`law-text ${courier.className}`}>
-                <div className="document-content">
+                <div className={`document-content ${courier.className}`}>
                   <div className="document-title">
                     Code of Massachusetts Regulations
                   </div>
@@ -257,11 +260,9 @@ export default function Home() {
                     determined in accordance with 310 CMR 7.70(6) and (8).
                   </p>
                 </div>
-              </div>
             </div>
             <div className="law law-5">
-              <div className={`law-text ${courier.className}`}>
-                <div className="document-content">
+                <div className={`document-content ${courier.className}`}>
                   <div className="document-title">
                     Code of Vermont Rules
                   </div>
@@ -281,19 +282,18 @@ export default function Home() {
                     available for compliance deductions under section 23-605, as of the CO 2 allowance
                     transfer deadline, in the source's compliance account
                     <span className="highlight">
-                      in an amount not less than the total CO 2 emissions for the control period
+                      in an amount not less than the total CO 2 emissions
                     </span>
-                    from all CO 2 budget units at the source, less the CO 2 allowances deducted to
-                    meet the requirements of subdivision 23-105(c)(2), with respect to the
-                    previous two interim control periods, as determined in accordance with
+                    for the control period from all CO 2 budget units at the source,
+                    less the CO 2 allowances deducted to meet the requirements of
+                    subdivision 23-105(c)(2), with respect to the previous two
+                    interim control periods, as determined in accordance with
                     Subchapters VI and VIII.
                   </p>
                 </div>
-              </div>
             </div>
             <div className="law law-6">
-              <div className={`law-text ${courier.className}`}>
-                <div className="document-content">
+                <div className={`document-content ${courier.className}`}>
                   <div className="document-title">
                     Code of Maryland Regulations
                   </div>
@@ -309,11 +309,9 @@ export default function Home() {
                     in a control period, by the allowance transfer deadline for that control period.
                   </p>
                 </div>
-              </div>
             </div>
             <div className="law law-7">
-              <div className={`law-text ${courier.className}`}>
-                <div className="document-content">
+                <div className={`document-content ${courier.className}`}>
                   <div className="document-title">
                     The New Jersey Administrative Code
                   </div>
@@ -343,43 +341,34 @@ export default function Home() {
                     3. ...
                   </p>
                 </div>
-              </div>
             </div>
             <div className="law law-8">
-              <div className={`law-text ${courier.className}`}>
-                <div className="document-content">
+                <div className={`document-content ${courier.className}`}>
                   <div className="document-title">
-                    Rhode Island Code of Regulations
+                    Regulations of Connecticut State Agencies
                   </div>
                   <div className="section-header">
-                    250-RICR-120-05-46, 'CO2 Budget Trading Program'
+                    Sec. 22a-174-31. Control of carbon dioxides emissions
                   </div>
                   <p className="document-body">
-                    46.7 A.Carbon dioxide requirements<br />
-                    1.The owners and operators of
+                    (b)(3) General Provisions and CO2 Requirements<br />
+                    (A) The owners and operators of
                     <span className="highlight">
-                      each CO2 budget source
+                      each CO2 budget source shall hold CO2 allowances
                     </span>
-                    and each CO2 budget unit at the source
-                    <span className="highlight">
-                      shall hold CO2 allowances
-                    </span>
-                    available for compliance deductions, under § 46.12.5 of this Part, as of the CO2
-                    allowance transfer deadline, as defined in § 46.5(A)(22) of this Part,
+                    available for compliance deductions under subsection (g)(5)
+                    of this section, not later than the CO2 allowance transfer deadline,
                     in the source's compliance account
                     <span className="highlight">
-                      in an amount not less than the total CO2 emissions for the control period
+                      in an amount equal to or greater than the total CO2 emissions
                     </span>
-                    from all CO2 budget units at the source, less the CO2 allowances deducted to meet the
-                    requirements, with respect to the previous interim control periods, as
-                    determined in accordance with &sect;&sect; 46.12 through 46.14 of this Part.
+                    for each control period and each interim control period from all CO2 budget units at the source, as determined
+                    in accordance with subsections (g) and (i) of this section...
                   </p>
                 </div>
-              </div>
             </div>
             <div className="law law-9">
-              <div className={`law-text ${courier.className}`}>
-                <div className="document-content">
+                <div className={`document-content ${courier.className}`}>
                   <div className="document-title">
                     New York Codes, Rules, and Regulations
                   </div>
@@ -409,34 +398,36 @@ export default function Home() {
                     as determined in accordance with Subparts 242-6 and 242-8 of this Part.
                   </p>
                 </div>
-              </div>
             </div>
             <div className="law law-10">
-              <div className={`law-text ${courier.className}`}>
-                <div className="document-content">
+                <div className={`document-content ${courier.className}`}>
                   <div className="document-title">
-                    Regulations of Connecticut State Agencies
+                    Rhode Island Code of Regulations
                   </div>
                   <div className="section-header">
-                    Sec. 22a-174-31. Control of carbon dioxides emissions
+                    250-RICR-120-05-46, 'CO2 Budget Trading Program'
                   </div>
                   <p className="document-body">
-                    (b)(3) General Provisions and CO2 Requirements<br />
-                    (A) The owners and operators of
+                    46.7 A.Carbon dioxide requirements<br />
+                    1.The owners and operators of
                     <span className="highlight">
-                      each CO2 budget source shall hold CO2 allowances
+                      each CO2 budget source
                     </span>
-                    available for compliance deductions under subsection (g)(5)
-                    of this section, not later than the CO2 allowance transfer deadline,
+                    and each CO2 budget unit at the source
+                    <span className="highlight">
+                      shall hold CO2 allowances
+                    </span>
+                    available for compliance deductions, under § 46.12.5 of this Part, as of the CO2
+                    allowance transfer deadline, as defined in § 46.5(A)(22) of this Part,
                     in the source's compliance account
                     <span className="highlight">
-                      in an amount equal to or greater than the total CO2 emissions
+                      in an amount not less than the total CO2 emissions for the control period
                     </span>
-                    for each control period and each interim control period from all CO2 budget units at the source, as determined
-                    in accordance with subsections (g) and (i) of this section...
+                    from all CO2 budget units at the source, less the CO2 allowances deducted to meet the
+                    requirements, with respect to the previous interim control periods, as
+                    determined in accordance with &sect;&sect; 46.12 through 46.14 of this Part.
                   </p>
                 </div>
-              </div>
             </div>
           </div>
         </section>
