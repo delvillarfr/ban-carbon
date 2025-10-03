@@ -12,31 +12,15 @@ export default function Home() {
     <>
       <div id="sentinel"></div>
 
-      <div className="landing-background-wrapper">
-        <div className="landing-background chimney-gray">
-          <div className="landing-media shift-right">
-            <video autoPlay muted loop playsInline preload="metadata">
+      <div className="background-wrapper">
+        <div className="smokestack-background">
+          <div className="smokestack shift-right">
+            <video
+              className="smokestack-video" autoPlay muted loop playsInline
+              preload="metadata"
+              >
               <source src="/chimney-darkgray.mp4" type="video/mp4" />
             </video>
-          </div>
-        </div>
-        <div className="gradient-background">
-          <div className="landing-background">
-            <div className="landing-media shift-right">
-              <Image
-                src="/rggi-power-plants.svg"
-                alt="Map of northeastern USA with chimney"
-                width={1577}
-                height={887}
-              />
-              <Image
-                src="/rggi-power-plants-bright.svg"
-                alt="Map of RGGI power plants sized by CO2 emissions"
-                width={1577}
-                height={887}
-                className="top-left-position"
-              />
-            </div>
           </div>
         </div>
       </div>

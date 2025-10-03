@@ -7,6 +7,7 @@
   --standard-width: clamp(320px, 100%, 600px);
   --large-text: clamp(0.9rem, 1.5vw, 1.0rem);
   --text: clamp(0.8rem, 1.5vw, 1.0rem);
+  --media-width: clamp(1600px, 200vw, 2100px);
 }
 
 
@@ -30,7 +31,7 @@ section {
 
 
 /* Landing video and USA map */
-.landing-background-wrapper {
+.background-wrapper {
   position: absolute;
   top: 0;
   left: 0;
@@ -38,34 +39,27 @@ section {
   z-index: -1;
 }
 
-.landing-background {
+.smokestack-background {
   width: 100%;
-  container-type: size;
-  height: var(--landing-height);
   overflow: clip;
-  display: flex;
-  flex-direction: column;
+  background-color: rgb(146, 146, 146);
+}
+
+.smokestack {
+  width: var(--media-width);
+  container-type: size;
+  aspect-ratio: 16/9;
 }
 
 .shift-right {
   /* margin-left uses parent's dimensions; transform uses own dimensions */
   margin-left: clamp(50%, 80%, calc(50% + 270px));
-  transform: translateX(calc(-0.31 * 100cqh * 16 / 9));
+  transform: translateX(calc(-0.31 * 100cqw));
 }
 
-.landing-media {
+.smokestack-video {
+  width: 100%;
   height: 100%;
-  container-type: size;
-  aspect-ratio: 16/9;
-}
-
-.landing-media * {
-  height: 100%;
-  width: auto;
-}
-
-.chimney-gray {
-  background-color: rgb(146, 146, 146);
 }
 
 .gradient-background {
