@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <div id="sentinel"></div>
-
+      
       <div className="background-wrapper">
         <div className="smokestack-background">
           <div className="smokestack shift-right">
@@ -21,6 +21,23 @@ export default function Home() {
               >
               <source src="/chimney-darkgray.mp4" type="video/mp4" />
             </video>
+          </div>
+        </div>
+        <div className="background">
+          <div className="media shift-right">
+            <Image
+              src="/rggi-power-plants-tall.svg"
+              alt="Map of northeastern USA with chimney"
+              width={1577}
+              height={887}
+            />
+            <Image
+              src="/rggi-power-plants-bright.svg"
+              alt="Map of RGGI power plants sized by CO2 emissions"
+              width={1577}
+              height={887}
+              className="top-left-position"
+            />
           </div>
         </div>
       </div>
@@ -116,6 +133,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+          {/*
         <section>
           <div className="permits-line">
             <div className="permits-line-container">
@@ -415,6 +433,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        */}
       </main>
     </>
   );

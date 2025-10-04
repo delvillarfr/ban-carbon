@@ -2,12 +2,10 @@
 :root {
   --color: rgb(0, 0, 0);
   --background-color: rgb(255, 255, 255);
-  --landing-height: clamp(900px, 180cqw, 1200px);
-  --landing-width: calc(var(--landing-height) * 16 / 9);
-  --standard-width: clamp(320px, 100%, 600px);
+  --media-width: clamp(1600px, 280vw, 2400px);
+  --landing-height: calc(var(--media-width)*9/16);
   --large-text: clamp(0.9rem, 1.5vw, 1.0rem);
   --text: clamp(0.8rem, 1.5vw, 1.0rem);
-  --media-width: clamp(1600px, 200vw, 2100px);
 }
 
 
@@ -47,28 +45,43 @@ section {
 
 .smokestack {
   width: var(--media-width);
-  container-type: size;
   aspect-ratio: 16/9;
+  overflow: clip;
 }
 
 .shift-right {
-  /* margin-left uses parent's dimensions; transform uses own dimensions */
+  /* 1. Center smokestack. 2. Move it right.*/
   margin-left: clamp(50%, 80%, calc(50% + 270px));
-  transform: translateX(calc(-0.31 * 100cqw));
+  transform: translateX(calc(-0.31 * var(--media-width)));
 }
 
 .smokestack-video {
-  width: 100%;
   height: 100%;
+  width: auto;
 }
 
-.gradient-background {
-  height: 4500px;
+.background {
+  width: 100%;
+  overflow: clip;
   background:
-    linear-gradient(to bottom, rgb(146,146,146) 0%, transparent 50%, white 100%),
+    linear-gradient(to bottom,
+      rgb(146, 146, 146) 0%,
+      rgb(146, 146, 146) 2%,
+      transparent 50%,
+      white 100%),
     url("/grainy.png");
   background-size: auto auto;
   background-repeat: repeat;
+}
+
+.media {
+  width: var(--media-width);
+  margin-top: -5px;
+}
+
+.media img {
+  width: 100%;
+  height: auto;
 }
 
 .top-left-position {
@@ -330,8 +343,7 @@ section {
   filter: contrast(1.02) brightness(0.98);
 
   /* Moderately irregular edges */
-  clip-path: polygon(
-      0.8% 0.2%,
+  clip-path: polygon(0.8% 0.2%,
       25% 0.1%,
       50% 0.4%,
       75% 0.1%,
@@ -344,9 +356,9 @@ section {
       25% 99.1%,
       0.3% 99.3%,
       0.2% 75%,
-      0.5% 25%
-  );
+      0.5% 25%);
 }
+
 .law:active {
   z-index: 5;
 }
@@ -356,50 +368,59 @@ section {
   z-index: 4;
   background-color: rgb(248, 245, 240);
 }
+
 .law-2 {
   transform: translate(-50px, 40px) rotate(8deg);
   z-index: 2;
   background-color: rgb(245, 240, 235);
   filter: contrast(1.03) brightness(0.97) sepia(0.05);
 }
+
 .law-3 {
   transform: translate(0px, 250px) rotate(-5deg);
   z-index: 4;
   background-color: rgb(250, 248, 242);
 }
+
 .law-4 {
   transform: translate(150px, 120px) rotate(-15deg);
   z-index: 2;
   background-color: rgb(242, 240, 235);
   filter: contrast(1.01) brightness(0.99) sepia(0.03);
 }
+
 .law-5 {
   transform: translate(-220px, 200px) rotate(-8deg);
   z-index: 3;
   background-color: rgb(246, 242, 238);
 }
+
 .law-6 {
   transform: translate(200px, -150px) rotate(-18deg);
   z-index: 1;
   background-color: rgb(244, 238, 230);
   filter: contrast(1.04) brightness(0.96) sepia(0.08);
 }
+
 .law-7 {
   transform: translate(-200px, 120px) rotate(22deg);
   z-index: 2;
   background-color: rgb(240, 235, 228);
 }
+
 .law-8 {
   transform: translate(250px, 200px) rotate(-25deg);
   z-index: 3;
   background-color: rgb(247, 243, 237);
   filter: contrast(1.02) brightness(0.98) sepia(0.04);
 }
+
 .law-9 {
   transform: translate(-120px, -70px) rotate(10deg);
   z-index: 1;
   background-color: rgb(243, 237, 229);
 }
+
 .law-10 {
   transform: translate(240px, 350px) rotate(14deg);
   z-index: 3;
