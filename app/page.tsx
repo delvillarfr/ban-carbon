@@ -11,14 +11,14 @@ export default function Home() {
   return (
     <>
       <div id="sentinel"></div>
-      
+
       <div className="background-wrapper">
         <div className="smokestack-background">
           <div className="smokestack shift-right">
             <video
               className="smokestack-video" autoPlay muted loop playsInline
               preload="metadata"
-              >
+            >
               <source src="/chimney-darkgray.mp4" type="video/mp4" />
             </video>
           </div>
@@ -26,16 +26,16 @@ export default function Home() {
         <div className="background">
           <div className="media shift-right">
             <Image
-              src="/rggi-power-plants-tall.svg"
+              src="/rggi-power-plants.svg"
               alt="Map of northeastern USA with chimney"
-              width={1577}
-              height={887}
+              width={1183}
+              height={1170}
             />
             <Image
               src="/rggi-power-plants-bright.svg"
               alt="Map of RGGI power plants sized by CO2 emissions"
-              width={1577}
-              height={887}
+              width={1183}
+              height={665}
               className="top-left-position"
             />
           </div>
@@ -59,8 +59,8 @@ export default function Home() {
               <Image
                 src="/favicon-dark.svg"
                 alt="BAN CARBON logo"
-                width={17}
-                height={17}
+                width={20}
+                height={20}
                 className="logo"
               />
             </Link>
@@ -68,8 +68,8 @@ export default function Home() {
         </div>
       </header>
 
-      <main >
-        <section >
+      <main>
+        <section>
           <div className="landing-container">
             <div className="landing">
               <div className="hero">
@@ -83,7 +83,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section >
+        <section>
           <div className="polluters-line">
             <div className="polluters-line-container">
               <h2 className="explainer-line">
@@ -94,56 +94,47 @@ export default function Home() {
               </h2>
             </div>
           </div>
-          <div className="polluters-example">
-            <div className="polluters-example-container">
+          <div className="polluter-card">
+            <div className="polluter-card-container">
               <Image
                 src="/astoria.png"
                 alt="Picture of Astoria Energy"
                 width={340}
                 height={340}
-                className="polluters-example-image"
+                className="polluter-card-image"
               />
-              <div className={`${courier.className} polluters-info`}>
+               <div className={`${courier.className} polluter-info`}>
                 <div className="percentage45-margin-top">
-                  <p>
-                    Astoria Energy
-                  </p>
+                  <p>Astoria Energy</p>
                 </div>
                 <div>
-                  <p>
-                    Queens, N.Y.C.
-                  </p>
+                  <p>Queens, N.Y.C.</p>
                 </div>
                 <div className="percentage7-margin-top">
-                  <p>
-                    CO<sub>2</sub> emissions, 2024:
-                  </p>
+                  <p>CO<sub>2</sub> emissions in 2024:</p>
                 </div>
                 <div>
-                  <p>
-                    3.2 million tonnes
-                  </p>
+                  <p>3.2 million tonnes</p>
                 </div>
                 <div>
-                  <p>
-                    = Bhutan or Iceland
-                  </p>
+                  <p>= Bhutan or Iceland</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
-          {/*
         <section>
-          <div className="permits-line">
-            <div className="permits-line-container">
-              <h2 className="explainer-line">
-                They need a state permit<br />
-                to emit each ton of CO<sub>2</sub>.
-              </h2>
+          <div className="permits-laws-section">
+            <div className="permits-line">
+              <div className="permits-line-container">
+                <h2 className="explainer-line">
+                  They need one <br />
+                  state permit to emit<br />
+                  each ton of CO<sub>2</sub>.
+                </h2>
+              </div>
             </div>
-          </div>
-          <div className="laws-container">
+            <div className="laws-container">
             <div className="law law-1">
                 <div className={`document-content ${courier.className}`}>
                   <div className="document-title">
@@ -432,8 +423,8 @@ export default function Home() {
                 </div>
             </div>
           </div>
+          </div>
         </section>
-        */}
       </main>
     </>
   );
