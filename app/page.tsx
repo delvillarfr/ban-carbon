@@ -135,6 +135,26 @@ export default function Home() {
               </div>
             </div>
             <div className="laws-container">
+            <input type="radio" name="state-tab" id="tab-ct" className="tab-input" />
+            <input type="radio" name="state-tab" id="tab-de" className="tab-input" />
+            <input type="radio" name="state-tab" id="tab-ma" className="tab-input" />
+            <input type="radio" name="state-tab" id="tab-md" className="tab-input" />
+            <input type="radio" name="state-tab" id="tab-nh" className="tab-input" defaultChecked />
+            <input type="radio" name="state-tab" id="tab-nj" className="tab-input" />
+            <input type="radio" name="state-tab" id="tab-ny" className="tab-input" />
+            <input type="radio" name="state-tab" id="tab-ri" className="tab-input" />
+            <input type="radio" name="state-tab" id="tab-vt" className="tab-input" />
+            <div className={`tab-bar ${courier.className}`}>
+              <label htmlFor="tab-ct" className="tab">CT</label>
+              <label htmlFor="tab-de" className="tab">DE</label>
+              <label htmlFor="tab-ma" className="tab">MA</label>
+              <label htmlFor="tab-md" className="tab">MD</label>
+              <label htmlFor="tab-nh" className="tab">NH</label>
+              <label htmlFor="tab-nj" className="tab">NJ</label>
+              <label htmlFor="tab-ny" className="tab">NY</label>
+              <label htmlFor="tab-ri" className="tab">RI</label>
+              <label htmlFor="tab-vt" className="tab">VT</label>
+            </div>
             <div className="law law-1">
                 <div className={`document-content ${courier.className}`}>
                   <div className="document-title">

@@ -319,14 +319,46 @@ section {
 }
 
 .laws-container {
-  position: absolute;
-  top: 0;
   width: 100%;
-  height: 950px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   z-index: 1;
+}
+
+.tab-input {
+  display: none;
+}
+
+.tab-bar {
+  display: flex;
+  gap: 0;
+  width: fit-content;
+  position: relative;
+  z-index: 10;
+}
+
+.tab {
+  background-color: rgb(255, 255, 204);
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 1px solid rgb(200, 190, 180);
+  border-bottom: none;
+  user-select: none;
+}
+
+#tab-nh:checked ~ .tab-bar label[for="tab-nh"],
+#tab-ct:checked ~ .tab-bar label[for="tab-ct"],
+#tab-de:checked ~ .tab-bar label[for="tab-de"],
+#tab-ma:checked ~ .tab-bar label[for="tab-ma"],
+#tab-md:checked ~ .tab-bar label[for="tab-md"],
+#tab-nj:checked ~ .tab-bar label[for="tab-nj"],
+#tab-ny:checked ~ .tab-bar label[for="tab-ny"],
+#tab-ri:checked ~ .tab-bar label[for="tab-ri"],
+#tab-vt:checked ~ .tab-bar label[for="tab-vt"] {
+  background-color: rgb(252, 252, 248);
+  position: relative;
+  z-index: 10;
 }
 
 .law {
@@ -339,7 +371,6 @@ section {
     inset 0 0 30px rgba(139, 119, 101, 0.1);
   border-radius: 1px;
   transition: z-index 0s, box-shadow 0.3s ease;
-  cursor: pointer;
   padding: 20px;
   overflow: hidden;
 
@@ -367,73 +398,63 @@ section {
       0.3% 99.3%,
       0.2% 75%,
       0.5% 25%);
+
+  z-index: 1;
 }
 
-.law:active {
-  z-index: 5;
+#tab-ct:checked ~ .law-8,
+#tab-de:checked ~ .law-1,
+#tab-ma:checked ~ .law-4,
+#tab-md:checked ~ .law-6,
+#tab-nh:checked ~ .law-3,
+#tab-nj:checked ~ .law-7,
+#tab-ny:checked ~ .law-9,
+#tab-ri:checked ~ .law-10,
+#tab-vt:checked ~ .law-5 {
+  z-index: 10;
 }
 
 .law-1 {
-  transform: translate(-200px, 300px) rotate(-15deg);
-  z-index: 4;
   background-color: rgb(248, 245, 240);
 }
 
 .law-2 {
-  transform: translate(-50px, 40px) rotate(8deg);
-  z-index: 2;
   background-color: rgb(245, 240, 235);
   filter: contrast(1.03) brightness(0.97) sepia(0.05);
 }
 
 .law-3 {
-  transform: translate(0px, 250px) rotate(-5deg);
-  z-index: 4;
   background-color: rgb(250, 248, 242);
 }
 
 .law-4 {
-  transform: translate(150px, 120px) rotate(-15deg);
-  z-index: 2;
   background-color: rgb(242, 240, 235);
   filter: contrast(1.01) brightness(0.99) sepia(0.03);
 }
 
 .law-5 {
-  transform: translate(-220px, 200px) rotate(-8deg);
-  z-index: 3;
   background-color: rgb(246, 242, 238);
 }
 
 .law-6 {
-  transform: translate(200px, -150px) rotate(-18deg);
-  z-index: 1;
   background-color: rgb(244, 238, 230);
   filter: contrast(1.04) brightness(0.96) sepia(0.08);
 }
 
 .law-7 {
-  transform: translate(-200px, 120px) rotate(22deg);
-  z-index: 2;
   background-color: rgb(240, 235, 228);
 }
 
 .law-8 {
-  transform: translate(250px, 200px) rotate(-25deg);
-  z-index: 3;
   background-color: rgb(247, 243, 237);
   filter: contrast(1.02) brightness(0.98) sepia(0.04);
 }
 
 .law-9 {
-  transform: translate(-120px, -70px) rotate(10deg);
-  z-index: 1;
   background-color: rgb(243, 237, 229);
 }
 
 .law-10 {
-  transform: translate(240px, 350px) rotate(14deg);
-  z-index: 3;
   background-color: rgb(249, 244, 239);
   filter: contrast(1.03) brightness(0.97) sepia(0.06);
 }
