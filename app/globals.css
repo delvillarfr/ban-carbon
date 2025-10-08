@@ -4,10 +4,10 @@
   --background-color: rgb(255, 255, 255);
   --media-width: clamp(1600px, 280vw, 2400px);
   --landing-height: calc(var(--media-width)*9/16);
-  --large-text: clamp(1rem, 2.1vw, 1.1rem);
+  --large-text: clamp(0.8rem, 2.1vw, 1.3rem);
   --text: clamp(0.8rem, 1.5vw, 1.0rem);
-  --small-text: clamp(0.8rem, 1.5vw, 1.0rem);
-  --conveyor-slope: 0.40;
+  --small-text: clamp(0.65rem, 1.3vw, 0.9rem);
+  --conveyor-slope: 0.346;
 }
 
 
@@ -78,7 +78,7 @@ section {
 
 .media {
   width: var(--media-width);
-  margin-top: -4px;
+  margin-top: -8px;
 }
 
 .media img,
@@ -332,16 +332,14 @@ section {
 
 .permits-line-container {
   padding-top: clamp(300px, 30vh, 500px);
-  margin-left: max(calc(50% - 100px),
-      /* Wide Screens */
-      calc(45% - 50px)
-      /* Narrow Screens */
+  margin-left: max(
+    calc(50% - 100px), /* Wide Screens */
+    calc(45% - 50px) /* Narrow Screens */
     );
 }
 
 .laws-container {
   width: 100%;
-  height: 800px;
   padding-top: 200px;
   z-index: 1;
   display: flex;
@@ -353,7 +351,6 @@ section {
   width: 320px;
   margin-left: 10vw;
   position: relative;
-  padding-bottom: 10px;
 }
 
 .folder-background {
@@ -361,7 +358,7 @@ section {
   top: 29px;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 20px);
   background-color: rgb(255, 255, 204);
   border: 0.5px solid rgb(200, 190, 180);
   border-radius: 0 5px 5px 5px;
@@ -447,12 +444,10 @@ section {
     0.5% 25%
     );
 }
-
 .law:not(.law-placeholder) {
   position: absolute;
   z-index: 1;
 }
-
 .law-placeholder {
   visibility: hidden;
 }
@@ -478,17 +473,17 @@ section {
 .law-title {
   text-align: center;
   margin-bottom: 8px;
-  font-size: var(--large-text);
+  font-size: var(--text);
 }
 
 .law-header {
-  font-size: var(--text);
+  font-size: var(--small-text);
   margin-bottom: 4px;
 }
 
 
 .law-body {
-  font-size: var(--text);
+  font-size: var(--small-text);
   line-height: 1.2;
 }
 
@@ -498,11 +493,42 @@ section {
 }
 
 
+/* Counter Section */
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: fit-content;
+  margin-top: 300px;
+  margin-left: calc(50% - 80px);
+}
+
+.counter-labels {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--large-text);
+}
+
+.counter-divider {
+  width: 3px;
+  height: 60px;
+  background-color: black;
+}
+
+.counter-number {
+  font-size: calc(2 * var(--large-text));
+  font-weight: 400;
+  color: rgb(240, 45, 46);
+}
+
+
 /* Spinning wheel animation */
 #rggi-power-plants_svg__wheels path {
   transform-box: fill-box;
   transform-origin: center;
-  animation: spin 0.3s linear infinite;
+  animation: spin 0.2s linear infinite;
 }
 
 @keyframes spin {

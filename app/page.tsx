@@ -5,10 +5,10 @@ import Link from 'next/link';
 import { useScrolledPastTop } from '@/app/lib/useScrolledPastTop';
 import EmailForm from '@/app/ui/EmailForm';
 import { courier } from '@/app/ui/fonts';
-import Line from '@/public/line.svg';
 import Smokestack from '@/public/rggi-power-plants.svg';
 import Law from '@/app/ui/Law';
 import { lawsData } from '@/app/lib/lawsData';
+import Counter from '@/app/ui/Counter';
 
 export default function Home() {
   const scrolled = useScrolledPastTop();
@@ -178,6 +178,20 @@ export default function Home() {
                 <Law lawData={lawsData[9]} />
                 <Law lawData={lawsData[6]} className="law-placeholder" />
               </div>
+            </div>
+            <div className={`counter-container ${courier.className}`}>
+              <div className="counter-labels">
+                <div>
+                  Live emissions<br />
+                  (2025, tons CO2)
+                </div>
+                <div className="counter-divider"></div>
+                <div>
+                  Permits they<br />
+                  must obtain
+                </div>
+              </div>
+              <Counter className="counter-number" />
             </div>
           </div>
         </section>
