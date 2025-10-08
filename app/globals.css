@@ -69,7 +69,7 @@ section {
     linear-gradient(to bottom,
       rgb(146, 146, 146) 0%,
       rgb(146, 146, 146) 2%,
-      transparent 50%
+      transparent 30%
       ),
     url("/grainy.png");
   background-size: auto auto;
@@ -509,6 +509,10 @@ section {
   align-items: center;
   gap: 10px;
   font-size: var(--large-text);
+}
+
+.counter-label-right {
+  padding-left: 5px;
 }
 
 .counter-divider {

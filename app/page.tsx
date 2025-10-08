@@ -186,7 +186,7 @@ export default function Home() {
                   (2025, tons CO2)
                 </div>
                 <div className="counter-divider"></div>
-                <div>
+                <div className="counter-label-right">
                   Permits they<br />
                   must obtain
                 </div>
