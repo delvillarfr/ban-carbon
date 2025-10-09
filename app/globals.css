@@ -82,6 +82,7 @@ section {
 .media {
   width: var(--smokestack-width);
   margin-top: -8px;
+  z-index: 0;
 }
 
 .media img,
@@ -96,24 +97,17 @@ section {
   left: 0;
 }
 
-.stockpile-permit {
-  position: relative;
-  width: 100%;
-  height: 2298px;
-}
-
 .stockpile-container {
-  position: absolute;
-  top: -150px;
-  left: -630px;
+  position: relative;
+  margin-top: -150px;
   width: 100%;
   display: flex;
   justify-content: center;
-  z-index: 0;
+  z-index: 99;
 }
 
 .stockpile {
-  margin-left: 1500px;
+  margin-left: 200px;
 }
 
 .stockpile img {
@@ -584,12 +578,35 @@ section {
   }
 }
 
+/* explainer: burn the permits */
+.burn-line {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.burn-line-container {
+  padding-left: clamp(60px, 24%, 220px);
+  padding-top: calc(0.07 * var(--smokestack-height));
+  color: white;
+}
+
 /* Permit Footage Section */
 .permit-footage-container {
-  position: absolute;
-  top: 500px;
-  left: 50px;
-  z-index: 1;
+  width: 100%;
+  margin-top: calc(0.07 * var(--smokestack-height));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.permits-closeup-container {
+  width: 300px;
+}
+
+.permits-closeup {
+  width: 100%;
+  height: auto;
 }
 
 .permit-footage {
@@ -597,12 +614,29 @@ section {
   width: 300px;
   height: 200px;
   overflow: hidden;
+  margin-top: -20px;
 }
 
 .permits-background {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.vignette-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(
+    ellipse 100% 100%,
+    transparent 10%,
+    rgba(49, 49, 49, 1) 55%,
+    rgba(49, 49, 49, 1) 100%
+  );
 }
 
 .permits-cctv-overlay {
@@ -660,17 +694,4 @@ section {
 
 .line-2 {
   animation-delay: 1s;
-}
-
-/* explainer: burn the permits */
-.burn-line {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.burn-line-container {
-  padding-left: clamp(60px, 24%, 220px);
-  padding-top: calc(0.07 * var(--smokestack-height));
-  color: white;
 }
