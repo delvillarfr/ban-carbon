@@ -2,12 +2,16 @@
 :root {
   --color: rgb(0, 0, 0);
   --background-color: rgb(255, 255, 255);
-  --media-width: clamp(1600px, 280vw, 2400px);
-  --landing-height: calc(var(--media-width)*9/16);
+  --smokestack-aspect-ratio: 0.6422;
+  --smokestack-width: clamp(1600px, 280vw, 2400px);
+  --smokestack-height: calc(
+    var(--smokestack-width) / var(--smokestack-aspect-ratio)
+  );
+  --landing-height: calc(var(--smokestack-width)*9/16);
   --large-text: clamp(0.8rem, 2.1vw, 1.3rem);
   --text: clamp(0.8rem, 1.5vw, 1.0rem);
   --small-text: clamp(0.65rem, 1.3vw, 0.9rem);
-  --conveyor-slope: 0.346;
+  --conveyor-slope: 0.40;
 }
 
 
@@ -19,13 +23,12 @@
 }
 
 body {
-  color: var(--color);
-  background-color: var(--background-color);
+  color: black;
+  background-color: white;
 }
 
 main,
 section {
-  height: 100%;
   width: 100%;
 }
 
@@ -46,7 +49,7 @@ section {
 }
 
 .smokestack {
-  width: var(--media-width);
+  width: var(--smokestack-width);
   aspect-ratio: 16/9;
   overflow: clip;
 }
@@ -54,7 +57,7 @@ section {
 .shift-right {
   /* 1. Center smokestack. 2. Move it right.*/
   margin-left: clamp(50%, 80%, calc(50% + 200px));
-  transform: translateX(calc(-0.31 * var(--media-width)));
+  transform: translateX(calc(-0.31 * var(--smokestack-width)));
 }
 
 .smokestack-video {
@@ -77,7 +80,7 @@ section {
 }
 
 .media {
-  width: var(--media-width);
+  width: var(--smokestack-width);
   margin-top: -8px;
 }
 
@@ -93,16 +96,24 @@ section {
   left: 0;
 }
 
+.stockpile-permit {
+  position: relative;
+  width: 100%;
+  height: 2298px;
+}
+
 .stockpile-container {
+  position: absolute;
+  top: -150px;
+  left: -630px;
+  width: 100%;
   display: flex;
   justify-content: center;
-
+  z-index: 0;
 }
 
 .stockpile {
-  margin-top: -150px;
   margin-left: 1500px;
-  z-index: 0;
 }
 
 .stockpile img {
@@ -176,7 +187,6 @@ section {
   transition: opacity 0.2s ease;
 }
 
-
 /* Landing Content */
 .landing-container {
   height: var(--landing-height);
@@ -227,13 +237,23 @@ section {
   display: block;
   font-weight: 500;
   font-family: inter;
-  background-color: var(--color);
-  color: var(--background-color);
+  background-color: black;
+  color: white;
   border: none;
   border-radius: 15px;
   cursor: pointer;
   text-decoration: none;
   padding: 10px;
+}
+
+
+.smokestack-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 100%;
+  height: var(--smokestack-height);
+  overflow: hidden;
 }
 
 
@@ -246,14 +266,13 @@ section {
 }
 
 
-/* Explainer: polluters */
+/* explainer: polluters */
 .polluters-line {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  /* The div must go down to NYC, at 17% of the map height */
-  height: calc(0.83 * var(--landing-height));
+  height: calc(0.3 * var(--smokestack-height));
 }
 
 .polluters-line-container {
@@ -318,20 +337,8 @@ section {
 }
 
 /* Permits and Laws Section */
-.permits-laws-section {
-  position: relative;
-  width: 100%;
-  height: 2400px;
-  overflow: hidden;
-}
-
-.permits-line {
-  width: 100%;
-  z-index: 2;
-}
-
 .permits-line-container {
-  padding-top: clamp(300px, 30vh, 500px);
+  padding-top: calc(0.12 * var(--smokestack-height));
   margin-left: max(
     calc(50% - 100px), /* Wide Screens */
     calc(45% - 50px) /* Narrow Screens */
@@ -340,7 +347,7 @@ section {
 
 .laws-container {
   width: 100%;
-  padding-top: 200px;
+  padding-top: calc(0.05 * var(--smokestack-height));
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -495,13 +502,15 @@ section {
 
 /* Counter Section */
 .counter-container {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: end;
   gap: 20px;
   width: fit-content;
-  margin-top: 300px;
   margin-left: calc(50% - 80px);
+  padding-bottom: calc(0.13*var(--smokestack-height));
 }
 
 .counter-labels {
@@ -573,4 +582,95 @@ section {
   to {
     transform: translate(-28%, calc(-28% * var(--conveyor-slope)));
   }
+}
+
+/* Permit Footage Section */
+.permit-footage-container {
+  position: absolute;
+  top: 500px;
+  left: 50px;
+  z-index: 1;
+}
+
+.permit-footage {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.permits-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.permits-cctv-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 3;
+}
+
+/* Analog static effects */
+.analog-static {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+
+  /* Horizontal scanlines */
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.3) 0px,
+    transparent 1px,
+    transparent 2px
+  );
+}
+
+.rolling-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(34, 40, 11, 0.8) 0px,
+    transparent 5%
+  );
+  animation: rolling-line 2s linear infinite;
+}
+
+@keyframes rolling-line {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.line-2 {
+  animation-delay: 1s;
+}
+
+/* explainer: burn the permits */
+.burn-line {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.burn-line-container {
+  padding-left: clamp(60px, 24%, 220px);
+  padding-top: calc(0.07 * var(--smokestack-height));
+  color: white;
 }

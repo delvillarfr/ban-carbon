@@ -38,14 +38,40 @@ export default function Home() {
               className="top-left-position"
             />
           </div>
-          <div className="stockpile-container">
-            <div className="stockpile">
-              <Image
-                src="/stockpile.svg"
-                alt="Stockpile"
-                width={3400}
-                height={1913}
-              />
+          <div className="stockpile-permit">
+            <div className="stockpile-container">
+              <div className="stockpile">
+                <Image
+                  src="/stockpile.svg"
+                  alt="Stockpile"
+                  width={3400}
+                  height={1913}
+                />
+              </div>
+            </div>
+            <div className="permit-footage-container">
+              <div className="permit-footage">
+                {/* Background layer - permits */}
+                <Image
+                  src="/permits.png"
+                  alt="Permit footage"
+                  width={300}
+                  height={200}
+                  className="permits-background"
+                />
+                {/* Intermediate layer - analog static/scanlines */}
+                <div className="analog-static"></div>
+                <div className="rolling-line"></div>
+                <div className="rolling-line line-2"></div>
+                {/* Foreground layer - CCTV overlay */}
+                <Image
+                  src="/permits-cctv.svg"
+                  alt="CCTV overlay"
+                  width={131}
+                  height={88}
+                  className="permits-cctv-overlay"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -92,7 +118,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section>
+        <div className="smokestack-contents">
           <div className="polluters-line">
             <div className="polluters-line-container">
               <h2 className="explainer-line">
@@ -112,7 +138,7 @@ export default function Home() {
                 height={340}
                 className="polluter-card-image"
               />
-               <div className={`${courier.className} polluter-info`}>
+              <div className={`${courier.className} polluter-info`}>
                 <div className="percentage45-margin-top">
                   <p>Astoria Energy</p>
                 </div>
@@ -131,67 +157,71 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+          <div className="permits-line-container">
+            <h2 className="explainer-line">
+              They need one <br />
+              state permit to emit<br />
+              each ton of CO<sub>2</sub>.
+            </h2>
+          </div>
+          <div className={`laws-container ${courier.className}`}>
+            <div className="folder">
+              <div className="tab-bar worn-paper">
+                <input type="radio" name="state-tab" id="tab-ct" />
+                <input type="radio" name="state-tab" id="tab-de" />
+                <input type="radio" name="state-tab" id="tab-ma" />
+                <input type="radio" name="state-tab" id="tab-md" />
+                <input type="radio" name="state-tab" id="tab-nh" defaultChecked />
+                <input type="radio" name="state-tab" id="tab-nj" />
+                <input type="radio" name="state-tab" id="tab-ny" />
+                <input type="radio" name="state-tab" id="tab-ri" />
+                <input type="radio" name="state-tab" id="tab-vt" />
+                <label htmlFor="tab-ct">CT</label>
+                <label htmlFor="tab-de">DE</label>
+                <label htmlFor="tab-ma">MA</label>
+                <label htmlFor="tab-md">MD</label>
+                <label htmlFor="tab-nh">NH</label>
+                <label htmlFor="tab-nj">NJ</label>
+                <label htmlFor="tab-ny">NY</label>
+                <label htmlFor="tab-ri">RI</label>
+                <label htmlFor="tab-vt">VT</label>
+              </div>
+              <div className="folder-background worn-paper"></div>
+              <Law lawData={lawsData[0]} />
+              <Law lawData={lawsData[1]} />
+              <Law lawData={lawsData[2]} />
+              <Law lawData={lawsData[3]} />
+              <Law lawData={lawsData[4]} />
+              <Law lawData={lawsData[5]} />
+              <Law lawData={lawsData[6]} />
+              <Law lawData={lawsData[7]} />
+              <Law lawData={lawsData[8]} />
+              <Law lawData={lawsData[9]} />
+              <Law lawData={lawsData[6]} className="law-placeholder" />
+            </div>
+          </div>
+          <div className={`counter-container ${courier.className}`}>
+            <div className="counter-labels">
+              <div>
+                Live emissions<br />
+                (2025, tons CO2)
+              </div>
+              <div className="counter-divider"></div>
+              <div className="counter-label-right">
+                Permits they<br />
+                must obtain
+              </div>
+            </div>
+            <Counter className="counter-number" />
+          </div>
+        </div>
         <section>
-          <div className="permits-laws-section">
-            <div className="permits-line">
-              <div className="permits-line-container">
-                <h2 className="explainer-line">
-                  They need one <br />
-                  state permit to emit<br />
-                  each ton of CO<sub>2</sub>.
-                </h2>
-              </div>
-            </div>
-            <div className={`laws-container ${courier.className}`}>
-              <div className="folder">
-                <div className="tab-bar worn-paper">
-                  <input type="radio" name="state-tab" id="tab-ct" />
-                  <input type="radio" name="state-tab" id="tab-de" />
-                  <input type="radio" name="state-tab" id="tab-ma" />
-                  <input type="radio" name="state-tab" id="tab-md" />
-                  <input type="radio" name="state-tab" id="tab-nh" defaultChecked />
-                  <input type="radio" name="state-tab" id="tab-nj" />
-                  <input type="radio" name="state-tab" id="tab-ny" />
-                  <input type="radio" name="state-tab" id="tab-ri" />
-                  <input type="radio" name="state-tab" id="tab-vt" />
-                  <label htmlFor="tab-ct">CT</label>
-                  <label htmlFor="tab-de">DE</label>
-                  <label htmlFor="tab-ma">MA</label>
-                  <label htmlFor="tab-md">MD</label>
-                  <label htmlFor="tab-nh">NH</label>
-                  <label htmlFor="tab-nj">NJ</label>
-                  <label htmlFor="tab-ny">NY</label>
-                  <label htmlFor="tab-ri">RI</label>
-                  <label htmlFor="tab-vt">VT</label>
-                </div>
-                <div className="folder-background worn-paper"></div>
-                <Law lawData={lawsData[0]} />
-                <Law lawData={lawsData[1]} />
-                <Law lawData={lawsData[2]} />
-                <Law lawData={lawsData[3]} />
-                <Law lawData={lawsData[4]} />
-                <Law lawData={lawsData[5]} />
-                <Law lawData={lawsData[6]} />
-                <Law lawData={lawsData[7]} />
-                <Law lawData={lawsData[8]} />
-                <Law lawData={lawsData[9]} />
-                <Law lawData={lawsData[6]} className="law-placeholder" />
-              </div>
-            </div>
-            <div className={`counter-container ${courier.className}`}>
-              <div className="counter-labels">
-                <div>
-                  Live emissions<br />
-                  (2025, tons CO2)
-                </div>
-                <div className="counter-divider"></div>
-                <div className="counter-label-right">
-                  Permits they<br />
-                  must obtain
-                </div>
-              </div>
-              <Counter className="counter-number" />
+          <div className="burn-line">
+            <div className="burn-line-container">
+              <h2 className="explainer-line">
+                Ban their CO<sub>2</sub>.<br />
+                Burn their permits.
+              </h2>
             </div>
           </div>
         </section>
