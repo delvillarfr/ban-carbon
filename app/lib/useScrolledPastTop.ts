@@ -19,7 +19,7 @@ export function useScrolledPastTop() {
 
     observer.observe(sentinelDiv);
     return () => observer.disconnect();
-  });
+  }, []);
 
   return scrolled;
 }

@@ -16,7 +16,7 @@ export const lawsData: LawData[] = [
           shall hold CO2 allowances
         </span>
         available for compliance deductions under subsection 6.5, as of the CO2 allowance
-        transfer deadline, in the source's compliance account
+        transfer deadline, in the source&apos;s compliance account
         <span className="highlight">
           in an amount not less than the total CO2 emissions
         </span>
@@ -122,7 +122,7 @@ export const lawsData: LawData[] = [
           shall hold CO 2 allowances
         </span>
         available for compliance deductions under section 23-605, as of the CO 2 allowance
-        transfer deadline, in the source's compliance account
+        transfer deadline, in the source&apos;s compliance account
         <span className="highlight">
           in an amount not less than the total CO 2 emissions
         </span>
@@ -232,7 +232,7 @@ export const lawsData: LawData[] = [
   {
     id: 10,
     title: 'Rhode Island Code of Regulations',
-    header: "250-RICR-120-05-46, 'CO2 Budget Trading Program'",
+    header: '250-RICR-120-05-46, &apos;CO2 Budget Trading Program&apos;',
     body: (
       <>
         46.7 A.Carbon dioxide requirements<br />
