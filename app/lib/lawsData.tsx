@@ -44,7 +44,7 @@ export const lawsData: LawData[] = [
         </span>
         available for compliance deductions under subsection 5(D)
         of this Chapter, as of the CO2 allowance transfer deadline, in the
-        source's compliance account
+        source&apos;s compliance account
         <span className="highlight">
           in an amount not less than the total CO2 emissions
         </span>
@@ -70,7 +70,7 @@ export const lawsData: LawData[] = [
           each CO2 budget unit at the source shall hold CO2 allowances
         </span>
         available for compliance deductions under Env-A
-        4605.04, as of the CO2 allowance transfer deadline, in the source's compliance account,
+        4605.04, as of the CO2 allowance transfer deadline, in the source&apos;s compliance account,
         <span className="highlight">
           in an amount not less than the total CO2 emissions from fossil fuel-fired generation
         </span>
@@ -96,7 +96,7 @@ export const lawsData: LawData[] = [
           shall hold CO2 allowances available
         </span>
         for compliance deductions under 310 CMR 7.70(6)(e), as of the CO2
-        allowance transfer deadline, in the source's compliance account
+        allowance transfer deadline, in the source&apos;s compliance account
         <span className="highlight">
           in an amount not less than the total CO2 emissions
         </span>
@@ -163,7 +163,7 @@ export const lawsData: LawData[] = [
         <span className="highlight">
           hold CO2 allowances
         </span>
-        in the source's compliance account, available for compliance deductions under N.J.A.C. 7:27C-6.9, as
+        in the source&apos;s compliance account, available for compliance deductions under N.J.A.C. 7:27C-6.9, as
         follows: <br />
         1. ... <br />
         2. In the case of a control period,
@@ -191,7 +191,7 @@ export const lawsData: LawData[] = [
         </span>
         available for compliance deductions under subsection (g)(5)
         of this section, not later than the CO2 allowance transfer deadline,
-        in the source's compliance account
+        in the source&apos;s compliance account
         <span className="highlight">
           in an amount equal to or greater than the total CO2 emissions
         </span>
@@ -217,7 +217,7 @@ export const lawsData: LawData[] = [
         </span>
         available for compliance deductions under section 242-6.5 of this Part,
         as of the CO2 allowance transfer deadline,
-        in the source's compliance account
+        in the source&apos;s compliance account
         <span className="highlight">
         in an amount not less than the total CO2 emissions
         </span>
@@ -246,7 +246,7 @@ export const lawsData: LawData[] = [
         </span>
         available for compliance deductions, under § 46.12.5 of this Part, as of the CO2
         allowance transfer deadline, as defined in § 46.5(A)(22) of this Part,
-        in the source's compliance account
+        in the source&apos;s compliance account
         <span className="highlight">
           in an amount not less than the total CO2 emissions for the control period
         </span>
