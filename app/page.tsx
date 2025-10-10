@@ -9,6 +9,7 @@ import Smokestack from '@/public/rggi-power-plants.svg';
 import Law from '@/app/ui/Law';
 import { lawsData } from '@/app/lib/lawsData';
 import Counter from '@/app/ui/Counter';
+import AnimatedPowerPlants from '@/app/ui/AnimatedPowerPlants';
 
 export default function Home() {
   const scrolled = useScrolledPastTop();
@@ -26,22 +27,16 @@ export default function Home() {
               playsInline
               loop
               preload="metadata"
-              poster="/chimney-darkgray-srbg.jpg"
+              poster="/chimney-poster.jpg"
             >
-              <source src="/chimney-darkgray-bt709.mp4" type="video/mp4" />
+              <source src="/chimney-bt709.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
         <div className="background">
           <div className="smokestack shift-right">
             <Smokestack />
-            <Image
-              src="/rggi-power-plants-bright.svg"
-              alt="Map of RGGI power plants sized by CO2 emissions"
-              width={1183}
-              height={665}
-              className="top-left-position"
-            />
+            <AnimatedPowerPlants />
           </div>
           <div className="stockpile-container">
             <div className="stockpile">
