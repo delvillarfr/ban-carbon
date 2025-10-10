@@ -20,10 +20,15 @@ export default function Home() {
         <div className="smoke-background">
           <div className="smoke shift-right">
             <video
-              className="smoke-video" autoPlay muted loop playsInline
+              className="smoke-video"
+              autoPlay
+              muted
+              playsInline
+              loop
               preload="metadata"
+              poster="/chimney-darkgray-srbg.jpg"
             >
-              <source src="/chimney-darkgray.mp4" type="video/mp4" />
+              <source src="/chimney-darkgray-bt709.mp4" type="video/mp4" />
             </video>
           </div>
         </div>

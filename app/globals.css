@@ -65,6 +65,8 @@ section {
 .smoke-video {
   height: 100%;
   width: auto;
+  filter: brightness(1);
+  transform: translateZ(0);
 }
 
 .background {
