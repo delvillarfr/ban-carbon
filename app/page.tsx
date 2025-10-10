@@ -10,6 +10,7 @@ import Law from '@/app/ui/Law';
 import { lawsData } from '@/app/lib/lawsData';
 import Counter from '@/app/ui/Counter';
 import AnimatedPowerPlants from '@/app/ui/AnimatedPowerPlants';
+import EnhancedStockpile from '@/app/ui/EnhancedStockpile';
 
 export default function Home() {
   const scrolled = useScrolledPastTop();
@@ -27,7 +28,7 @@ export default function Home() {
               playsInline
               loop
               preload="metadata"
-              poster="/chimney-poster.jpg"
+              poster="/chimney_poster.jpg"
             >
               <source src="/chimney-bt709.mp4" type="video/mp4" />
             </video>
@@ -40,12 +41,7 @@ export default function Home() {
           </div>
           <div className="stockpile-container">
             <div className="stockpile">
-              <Image
-                src="/stockpile.svg"
-                alt="Stockpile"
-                width={3400}
-                height={1913}
-              />
+              <EnhancedStockpile />
             </div>
           </div>
         </div>
