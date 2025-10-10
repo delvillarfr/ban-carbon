@@ -3,7 +3,7 @@
 import { createEmail } from './actions';
 import { useState } from 'react';
 
-export default function EmailForm() {
+export default function EmailForm({ className }: { className?: string }) {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   async function handleSubmit(formData: FormData) {
@@ -12,7 +12,7 @@ export default function EmailForm() {
   }
 
   return (
-    <form action={handleSubmit} className="email">
+    <form action={handleSubmit} className={`email ${className || ''}`}>
       <input
         type="email" placeholder="your@email.com"
         name="email" required

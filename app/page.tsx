@@ -17,10 +17,10 @@ export default function Home() {
       <div id="sentinel"></div>
 
       <div className="background-wrapper">
-        <div className="smokestack-background">
-          <div className="smokestack shift-right">
+        <div className="smoke-background">
+          <div className="smoke shift-right">
             <video
-              className="smokestack-video" autoPlay muted loop playsInline
+              className="smoke-video" autoPlay muted loop playsInline
               preload="metadata"
             >
               <source src="/chimney-darkgray.mp4" type="video/mp4" />
@@ -28,7 +28,7 @@ export default function Home() {
           </div>
         </div>
         <div className="background">
-          <div className="media shift-right">
+          <div className="smokestack shift-right">
             <Smokestack />
             <Image
               src="/rggi-power-plants-bright.svg"
@@ -50,6 +50,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
 
 
       <header className="navbar-container">
@@ -123,7 +124,7 @@ export default function Home() {
                   <p>CO<sub>2</sub> emissions in 2024:</p>
                 </div>
                 <div>
-                  <p>3.2 million tonnes</p>
+                  <p>3.5 million tons</p>
                 </div>
                 <div>
                   <p>= Bhutan or Iceland</p>
@@ -190,52 +191,66 @@ export default function Home() {
           </div>
         </div>
         <section>
-          <div className="burn-line">
-            <div className="burn-line-container">
-              <h2 className="explainer-line">
-                Ban their CO<sub>2</sub>.<br />
-                Burn their permits.
-              </h2>
+          <div className="stockpile-contents">
+              <div className="burn-line-container">
+                <h2 className="explainer-line">
+                  Ban their CO<sub>2</sub>.<br />
+                  Burn their permits.
+                </h2>
+              </div>
+            <div className="permit-footage-container">
+              <div className="permits-closeup-container">
+                <Image
+                  src="/permits-closeup.svg"
+                  alt="Permits close-up"
+                  width={119}
+                  height={134}
+                  className="permits-closeup"
+                />
+              </div>
+              <div className="permit-footage">
+                {/* Background layer - permits */}
+                <Image
+                  src="/permits.png"
+                  alt="Permit footage"
+                  width={300}
+                  height={200}
+                  className="permits-background"
+                />
+                {/* Intermediate layer - vignette */}
+                <div className="vignette-overlay"></div>
+                {/* Intermediate layer - analog static/scanlines */}
+                <div className="analog-static"></div>
+                <div className="rolling-line"></div>
+                <div className="rolling-line line-2"></div>
+                {/* Foreground layer - CCTV overlay */}
+                <Image
+                  src="/permits-cctv.svg"
+                  alt="CCTV overlay"
+                  width={131}
+                  height={88}
+                  className="permits-cctv-overlay"
+                />
+              </div>
             </div>
           </div>
         </section>
         <section>
-          <div className="permit-footage-container">
-            <div className="permits-closeup-container">
-              <Image
-                src="/permits-closeup.svg"
-                alt="Permits close-up"
-                width={119}
-                height={134}
-                className="permits-closeup"
-              />
-            </div>
-            <div className="permit-footage">
-              {/* Background layer - permits */}
-              <Image
-                src="/permits.png"
-                alt="Permit footage"
-                width={300}
-                height={200}
-                className="permits-background"
-              />
-              {/* Intermediate layer - vignette */}
-              <div className="vignette-overlay"></div>
-              {/* Intermediate layer - analog static/scanlines */}
-              <div className="analog-static"></div>
-              <div className="rolling-line"></div>
-              <div className="rolling-line line-2"></div>
-              {/* Foreground layer - CCTV overlay */}
-              <Image
-                src="/permits-cctv.svg"
-                alt="CCTV overlay"
-                width={131}
-                height={88}
-                className="permits-cctv-overlay"
-              />
+          <div className="cta-section">
+            <div className="cta-lines cta-line">
+              <p>1. We compete with power plants to buy <br />
+              <span className="invisible">1. </span>
+              their carbon permits in state auctions.</p>
+              <p>2. We lock them up in a trust forever.</p>
             </div>
           </div>
+          <EmailForm className="cta-end"/>
         </section>
+        <footer>
+          <a href="mailto:paco@bancarbon.com" className="footer-email">
+            paco@bancarbon.com
+          </a>
+        </footer>
       </main>
     </>
   );
