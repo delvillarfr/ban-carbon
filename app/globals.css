@@ -12,6 +12,10 @@
   --small-text: clamp(0.65rem, 1.3vw, 0.9rem);
   --conveyor-slope: 0.40;
   --hero-text-size: clamp(2rem, 8vw, 4rem);
+  --right-of-smokestack: max(
+    calc(50% - 120px), /* Wide Screens */
+    calc(45% - 65px) /* Narrow Screens */
+    );
 }
 
 
@@ -366,6 +370,7 @@ section {
 /* Permits and Laws Section */
 .permits-line-container {
   padding-top: calc(0.10 * var(--smokestack-height));
+  margin-left: var(--right-of-smokestack);
 }
 
 .laws-container {
@@ -522,12 +527,6 @@ section {
   padding: 1px 6px;
 }
 
-.right-of-smokestack {
-  margin-left: max(
-    calc(50% - 120px), /* Wide Screens */
-    calc(45% - 65px) /* Narrow Screens */
-    );
-}
 
 /* Counter Section */
 .counter-container {
@@ -538,6 +537,7 @@ section {
   justify-content: flex-end;
   gap: 20px;
   width: fit-content;
+  margin-left: calc(0.95 * var(--right-of-smokestack));
   padding-bottom: calc(0.12*var(--smokestack-height));
 }
 
