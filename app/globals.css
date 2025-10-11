@@ -4,8 +4,7 @@
   --smokestack-width: clamp(1600px, 280vw, 2400px);
   --smokestack-height: calc(var(--smokestack-width) / var(--smokestack-aspect-ratio));
   --stockpile-aspect-ratio: 4.0795;
-  --stockpile-width-pre: clamp(4000px, 900vw, 7000px);
-  --stockpile-width: clamp(400px, 100vw, 1200px);
+  --stockpile-width: clamp(4000px, 900vw, 7000px);
   --stockpile-height: calc(var(--stockpile-width) / var(--stockpile-aspect-ratio));
   --landing-height: calc(var(--smokestack-width)*9/16);
   --large-text: clamp(0.8rem, 2.1vw, 1.3rem);
