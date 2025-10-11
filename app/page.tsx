@@ -10,7 +10,6 @@ import Law from '@/app/ui/Law';
 import { lawsData } from '@/app/lib/lawsData';
 import Counter from '@/app/ui/Counter';
 import AnimatedPowerPlants from '@/app/ui/AnimatedPowerPlants';
-import EnhancedStockpile from '@/app/ui/EnhancedStockpile';
 
 export default function Home() {
   const scrolled = useScrolledPastTop();
@@ -41,7 +40,12 @@ export default function Home() {
           </div>
           <div className="stockpile-container">
             <div className="stockpile">
-              <EnhancedStockpile />
+              <Image
+                src="/stockpile.svg"
+                alt="Stockpile"
+                width={4434}
+                height={1087}
+              />
             </div>
           </div>
         </div>
@@ -175,7 +179,7 @@ export default function Home() {
             <div className="counter-labels">
               <div>
                 Live emissions<br />
-                (2025, tons CO2)
+                (2025, tons CO<sub>2</sub>)
               </div>
               <div className="counter-divider"></div>
               <div className="counter-label-right">
