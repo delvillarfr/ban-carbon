@@ -1,7 +1,7 @@
 /* Variable definitions */
 :root {
   --smokestack-aspect-ratio: 0.6422;
-  --smokestack-width: clamp(1600px, 280vw, 2400px);
+  --smokestack-width: clamp(1400px, 280vw, 2400px);
   --smokestack-height: calc(var(--smokestack-width) / var(--smokestack-aspect-ratio));
   --stockpile-aspect-ratio: 4.0795;
   --stockpile-width: clamp(4000px, 900vw, 7000px);
@@ -58,7 +58,7 @@ section {
 
 .shift-right {
   /* 1. Center smokestack. 2. Move it right.*/
-  margin-left: clamp(50%, 80%, calc(50% + 200px));
+  margin-left: clamp(50%, 75%, calc(50% + 200px));
   transform: translateX(calc(-0.31 * var(--smokestack-width)));
 }
 
@@ -99,12 +99,15 @@ section {
   width: 100%;
   height: auto;
 }
+
 .animated-power-plants #rggi-power-plants-bright_svg__power-plants path {
   animation: pulse-power-plants 4s ease-in-out infinite;
 }
 
 @keyframes pulse-power-plants {
-  0%, 100% {
+
+  0%,
+  100% {
     fill-opacity: 0.8;
   }
 
@@ -300,7 +303,7 @@ section {
 }
 
 .polluters-line-container {
-  padding-right: 30px;
+  padding-right: 40px;
   padding-top: 100px;
 }
 
@@ -310,8 +313,8 @@ section {
 }
 
 .polluter-card-container {
-  margin-left: min(calc(100vw - 200px), calc(50% + 10px));
-  margin-top: 20px;
+  margin-left: min(calc(100vw - 215px), calc(50% + 10px));
+  margin-top: 15px;
   overflow: clip;
   position: relative;
   animation: pulse-shadow 4s ease-in-out infinite;
@@ -362,12 +365,7 @@ section {
 
 /* Permits and Laws Section */
 .permits-line-container {
-  padding-top: calc(0.12 * var(--smokestack-height));
-  margin-left: max(calc(50% - 100px),
-      /* Wide Screens */
-      calc(45% - 50px)
-      /* Narrow Screens */
-    );
+  padding-top: calc(0.10 * var(--smokestack-height));
 }
 
 .laws-container {
@@ -524,6 +522,12 @@ section {
   padding: 1px 6px;
 }
 
+.right-of-smokestack {
+  margin-left: max(
+    calc(50% - 120px), /* Wide Screens */
+    calc(45% - 65px) /* Narrow Screens */
+    );
+}
 
 /* Counter Section */
 .counter-container {
@@ -534,8 +538,7 @@ section {
   justify-content: flex-end;
   gap: 20px;
   width: fit-content;
-  margin-left: calc(50% - 80px);
-  padding-bottom: calc(0.13*var(--smokestack-height));
+  padding-bottom: calc(0.12*var(--smokestack-height));
 }
 
 .counter-labels {
@@ -628,7 +631,7 @@ section {
 
 /* explainer: burn the permits */
 .burn-line-container {
-  padding-left: calc(0.02 * var(--stockpile-width));
+  padding-left: calc(0.01 * var(--stockpile-width));
   padding-top: calc(0.2 * var(--stockpile-height));
   color: white;
 }
@@ -643,7 +646,7 @@ section {
 }
 
 .permits-closeup-container {
-  width: clamp(180px, 60vw, 300px);
+  width: clamp(180px, 50vw, 300px);
 }
 
 .permits-closeup {
@@ -654,6 +657,7 @@ section {
 .permit-footage {
   position: relative;
   width: clamp(180px, 50vw, 300px);
+  aspect-ratio: 1.5;
   overflow: hidden;
   margin-top: -20px;
 }
@@ -747,6 +751,11 @@ section {
 
 .invisible {
   visibility: hidden;
+}
+
+.tiny-hspace {
+  display: inline-block;
+  width: 0.1em;
 }
 
 .cta-line {

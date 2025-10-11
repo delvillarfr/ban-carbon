@@ -134,7 +134,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="permits-line-container">
+          <div className="permits-line-container right-of-smokestack">
             <h2 className="explainer-line">
               They need one <br />
               state permit to emit<br />
@@ -177,7 +177,7 @@ export default function Home() {
               <Law lawData={lawsData[6]} className="law-placeholder" />
             </div>
           </div>
-          <div className={`counter-container ${courier.className}`}>
+          <div className={`counter-container ${courier.className} right-of-smokestack`}>
             <div className="counter-labels">
               <div>
                 Live emissions<br />
@@ -196,8 +196,8 @@ export default function Home() {
           <div className="stockpile-contents">
               <div className="burn-line-container">
                 <h2 className="explainer-line">
-                  Ban their CO<sub>2</sub>.<br />
-                  Burn their permits.
+                  To ban their CO<sub>2</sub><span className="tiny-hspace"></span>,<br />
+                  burn their permits.
                 </h2>
               </div>
             <div className="permit-footage-container">
