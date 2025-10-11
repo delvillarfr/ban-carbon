@@ -45,7 +45,9 @@ export default function Home() {
                 alt="Stockpile"
                 width={4434}
                 height={1087}
+                className="stockpile-base"
               />
+              <div className="stockpile-grain-layer"></div>
             </div>
           </div>
         </div>
