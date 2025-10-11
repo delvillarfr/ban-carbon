@@ -62,7 +62,7 @@ section {
 
 .shift-right {
   /* 1. Center smokestack. 2. Move it right.*/
-  margin-left: clamp(50%, 75%, calc(50% + 200px));
+  margin-left: clamp(50%, 75%, calc(50% + 190px));
   transform: translateX(calc(-0.31 * var(--smokestack-width)));
 }
 
@@ -307,7 +307,7 @@ section {
 }
 
 .polluters-line-container {
-  padding-right: 40px;
+  padding-right: 50px;
   padding-top: 100px;
 }
 
@@ -537,7 +537,11 @@ section {
   justify-content: flex-end;
   gap: 20px;
   width: fit-content;
-  margin-left: calc(0.95 * var(--right-of-smokestack));
+  margin-left: max(
+    calc(50% - 100px), /* Wide Screens */
+    calc(48% - 90px), /* Wide Screens */
+    calc(45% - 80px) /* Narrow Screens */
+    );
   padding-bottom: calc(0.12*var(--smokestack-height));
 }
 
