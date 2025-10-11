@@ -43,8 +43,8 @@
        width="1.0005"
        height="1.0015"><feTurbulence
          type="fractalNoise"
-         baseFrequency="2.7004722938144328 10"
-         numOctaves="3"
+         baseFrequency="0.9065151095360825 10"
+         numOctaves="1"
          seed="689"
          result="turbulence"
          id="feTurbulence94-9-0-3" /><feComposite
