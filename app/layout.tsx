@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Ban carbon emissions",
-  description: "Burn the legal permits that polluters need to emit CO2. Take direct action against climate change by destroying carbon emission allowances from the Regional Greenhouse Gas Initiative.",
+  description: "Burn the permits polluters need to emit CO2.",
   icons: {
     icon: "/favicon-dark.svg",
   },
