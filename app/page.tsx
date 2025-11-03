@@ -27,9 +27,9 @@ export default function Home() {
               playsInline
               loop
               preload="metadata"
-              poster="/chimney_poster.jpg"
+              poster="/high-res_poster.jpg"
             >
-              <source src="/chimney-bt709.mp4" type="video/mp4" />
+              <source src="/high-res-bt709.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
