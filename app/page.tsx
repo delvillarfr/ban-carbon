@@ -29,7 +29,7 @@ export default function Home() {
               preload="metadata"
               poster="/chimney_poster.jpg"
             >
-              <source src="/chimney-bt709.mp4" type="video/mp4" />
+              <source src="/chimney.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
